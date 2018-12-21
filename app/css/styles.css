@@ -38,7 +38,8 @@ a:hover {
   text-decoration: underline; }
 
 .content {
-  padding: 0; }
+  padding: 0;
+  font-size: 24px; }
 
 .content-block {
   height: 480px;
@@ -46,13 +47,12 @@ a:hover {
   justify-content: center;
   align-items: center; }
   .content-block:nth-child(odd) {
-    background-color: #6e41e0;
-    color: white; }
+    background-color: #ced8e1; }
 
 footer {
   padding: 64px 24px;
   background-color: #28333d;
-  color: white;
+  color: #f7f7f2;
   display: flex;
   justify-content: center;
   align-items: center; }

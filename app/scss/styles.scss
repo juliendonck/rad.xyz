@@ -48,6 +48,7 @@ a {
 
 .content {
   padding: 0;
+  font-size: 24px;
 }
 
 .content-block {
@@ -56,15 +57,14 @@ a {
   justify-content: center;
   align-items: center;
   &:nth-child(odd) {
-    background-color: #6e41e0;
-    color: white;
+    background-color: #ced8e1;
   }
 }
 
 footer {
   padding: 64px 24px;
   background-color: #28333d;
-  color: white;
+  color: #f7f7f2;
   display: flex;
   justify-content: center;
   align-items: center;
