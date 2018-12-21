@@ -1,0 +1,77 @@
+@font-face {
+  font-family: GTAmericaMono;
+  src: url("../fonts/GT-America-Mono-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: GTAmericaMonoMedium;
+  src: url("../fonts/GT-America-Mono-Medium.otf") format("opentype");
+}
+
+body {
+  background-color: white;
+  color: #28333d;
+  font-family: GTAmericaMono, monospace;
+  line-height: 135%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: GTAmericaMonoMedium;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding: 0 24px;
+}
+
+nav ul {
+  display: flex;
+  li {
+    margin-left: 36px;
+  }
+}
+
+a {
+  &.active {
+    font-family: GTAmericaMonoMedium;
+    color: #6e41e0;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.content {
+  padding: 0;
+}
+
+.content-block {
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:nth-child(odd) {
+    background-color: #6e41e0;
+    color: white;
+  }
+}
+
+footer {
+  padding: 64px 24px;
+  background-color: #28333d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ul {
+    display: flex;
+    li {
+      margin: 0 12px;
+    }
+  }
+}
