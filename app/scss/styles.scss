@@ -1,3 +1,7 @@
+// imports
+@import "reset";
+
+// load fonts
 @font-face {
   font-family: GTAmericaMono;
   src: url("../fonts/GT-America-Mono-Regular.otf") format("opentype");
@@ -5,6 +9,14 @@
 @font-face {
   font-family: GTAmericaMonoMedium;
   src: url("../fonts/GT-America-Mono-Medium.otf") format("opentype");
+}
+
+// selection color
+::-moz-selection {
+  background: yellow;
+}
+::selection {
+  background: yellow;
 }
 
 body {
