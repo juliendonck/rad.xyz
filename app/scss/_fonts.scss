@@ -1,0 +1,97 @@
+// load ../fonts
+
+@font-face {
+  font-family: "FoundersGrotesk";
+  src: url("../fonts/FoundersGroteskTextWeb-Regular.eot?") format("eot"),
+    url("../fonts/FoundersGroteskTextWeb-Regular.woff2") format("woff2"),
+    url("../fonts/FoundersGroteskTextWeb-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "FoundersGroteskMono";
+  src: url("../fonts/FoundersGroteskMonoWeb-Regular.eot?") format("eot"),
+    url("../fonts/FoundersGroteskMonoWeb-Regular.woff2") format("woff2"),
+    url("../fonts/FoundersGroteskMonoWeb-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "VulfMono";
+  src: url("../fonts/Vulf_Mono-Light_Italic_web.ttf") format("eot"),
+    url("../fonts/Vulf_Mono-Light_Italic_web.woff2") format("woff2"),
+    url("../fonts/Vulf_Mono-Light_Italic_web.woff") format("woff");
+}
+
+@font-face {
+  font-family: "FutureMono";
+  font-weight: bold;
+  src: url("../fonts/TheFutureMono01-Regular.otf");
+}
+
+// base font styles
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $white;
+  color: $black;
+  height: 100%;
+  font-family: FoundersGrotesk, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+}
+p.captions {
+  font-family: FoundersGrotesk, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+button {
+  font-family: FoundersGrotesk, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: $blue;
+  color: $white;
+  padding: 2px 8px 7px 8px;
+  border-radius: 2px;
+  &.active {
+    opacity: 0.8;
+  }
+  &:hover {
+    opacity: 0.95;
+  }
+}
+
+h1 {
+  font-family: VulfMono, Arial, Helvetica, sans-serif;
+  font-size: 42px;
+  line-height: 52px;
+}
+
+h2,
+h3,
+h4 {
+  font-family: FutureMono, monospace;
+  font-size: 28px;
+  line-height: 33px;
+}
+
+code,
+pre {
+  font-family: FoundersGroteskMono, monospace;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+p {
+  code {
+    opacity: 0.7;
+  }
+}
+
+a {
+  &.active {
+    opacity: 0.8;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>radicle</title>
+    <title>Radicle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -15,38 +15,227 @@
 
   <body>
     <header>
-      <a href="/"><h1>Radicle</h1></a>
-      <nav>
-        <ul>
-          <li><a href="/source.html">Source code</a></li>
-          <li><a href="/docs.html">Docs</a></li>
-          <li><a href="/white-paper.html">White paper</a></li>
-          <li><a href="/code-collaboration.html">Code collaboration</a></li>
-        </ul>
-      </nav>
+      <div class="left-header">
+        <div class="nav-bar">
+          <div class="try-logo">
+            <button>try</button>
+            <code>$ brew install Radicle</code>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="">Source </a></li>
+              <li><a href="">Install</a></li>
+              <li><a href="">Garden</a></li>
+              <li><a href="">Blog</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="title">
+          <svg width="226" height="48" viewBox="0 0 226 48" fill="none">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M111.986 5.6916C111.986 2.53009 114.535 0 117.65 0C120.765 0 123.314 2.53009 123.314 5.6916C123.314 8.9111 120.765 11.3836 117.65 11.3836C114.535 11.3836 111.986 8.9111 111.986 5.6916ZM104 39.9872H114.195V25.1541H104V18.1401H122.804V39.9872H133V47H104V39.9872ZM88.5921 32.9498C88.5921 37.3564 85.6182 40.5033 81.6144 40.5033C77.6682 40.5033 74.6367 37.3564 74.6367 32.9498C74.6367 28.5435 77.6682 25.3962 81.6144 25.3962C85.6182 25.3962 88.5921 28.5435 88.5921 32.9498ZM97 47.313V1H88.306V21.5058C86.7047 19.5597 83.559 17.9007 79.7843 17.9007C72.0054 17.9007 66 24.4242 66 32.9498C66 41.4765 72.0054 48 79.7843 48C83.559 48 86.7047 46.341 88.306 44.3946V47.313H97ZM51.592 32.9994C51.592 37.3916 48.6181 40.5281 44.6142 40.5281C40.668 40.5281 37.6364 37.3916 37.6364 32.9994C37.6364 28.6077 40.668 25.4707 44.6142 25.4707C48.6181 25.4707 51.592 28.6077 51.592 32.9994ZM60 47.3153V18.6836H51.3059V21.5931C49.7046 19.6536 46.5588 18 42.7837 18C35.0051 18 29 24.5019 29 32.9994C29 41.4981 35.0051 48 42.7837 48C46.5588 48 49.7046 46.3464 51.3059 44.4065V47.3153H60ZM0 47H9V18H0V47ZM18.9998 17C15.6995 17 13 19.6672 13 23C13 26.3936 15.6995 29 18.9998 29C22.2997 29 25 26.3936 25 23C25 19.6672 22.2997 17 18.9998 17ZM176.196 39.916H166V47H195V39.916H184.804V0H166V7.08401H176.196V39.916ZM150.55 40.472C146.633 40.472 143.639 37.4489 143.639 33C143.639 28.5515 146.633 25.528 150.55 25.528C153.325 25.528 155.533 27.4652 156.062 29.5211H165C164.077 23.0341 157.827 18 150.55 18C142.084 18 135 24.3878 135 33C135 41.6126 142.084 48 150.55 48C157.827 48 164.077 42.9663 165 36.4793H156.062C155.533 38.5352 153.325 40.472 150.55 40.472ZM211.755 25.072C208.804 25.072 206.307 26.8402 205.286 29.8625H217.714C217.317 27.4103 215.388 25.072 211.755 25.072ZM211.698 18C220.495 18 226 24.6154 226 33.8555C226 34.3114 226 34.7418 225.943 35.2242H205.002C205.279 38.6456 208.182 41.2449 211.925 41.2449C215.239 41.2449 217.077 39.9135 217.776 38.1509H225.416C224.992 41.4647 220.867 48 211.925 48C202.669 48 197 41.6115 197 32.9994C197 24.3306 203.867 18 211.698 18Z"
+              fill="black"
+            />
+          </svg>
+          <h1>A peer-to-peer stack for code collaboration</h1>
+        </div>
+      </div>
+      <div class="right-header"></div>
     </header>
-    <div class="content">
-      <div class="content-block"><p>Introduce radicle</p></div>
-      <div class="content-block">
-        <p>Highlight functionality (language/P2P/ammendable chains/...)</p>
+
+    <section class="collab">
+      <div>
+        <h2>Peer-to-peer</h2>
+        <p>
+          Open source development is fundamentally P2P. The Radicle stack runs
+          on IPFS to enable fully peer-to-peer conversations with code.
+        </p>
       </div>
-      <div class="content-block"><a href="/docs.html">Getting started</a></div>
-      <div class="content-block">
-        <a href="/code-collaboration.html">Code collaboration</a>
+      <div>
+        <h2>Programmable</h2>
+        <p>
+          The Radicle collaboration apps bring issue management and patch
+          proposals into the terminal. Use git-inspired commands to coordinate
+          with peers and review your history offline.
+        </p>
       </div>
-      <div class="content-block">
-        <a href="/white-paper.html">White paper</a>
+      <div>
+        <h2>Terminal-first</h2>
+        <p>
+          Apps are written in the radicle language, a Lisp dialect designed
+          specifically for programming state machines for peer-to-peer
+          replication. Tools and documentation for developing your own radicle
+          applications coming soon!
+        </p>
       </div>
-      <div class="content-block"><a href="/source.html">Source code</a></div>
-    </div>
+    </section>
+
+    <section class="try">
+      <h1>Collaborate with Radicle</h1>
+      <div class="try-section">
+        <h2>Setup a project</h2>
+        <p>
+          <code>rad project</code> allows you to register your git projects on
+          IPFS and connects your repo to other radicle applications, like
+          <code>rad issue</code> and <code>rad diff</code>.
+        </p>
+        <div class="terminal">
+          <pre>
+$ rad project init
+? What's the name of your project?
+Initialising project with name: acme
+
+✓ Assembled rad-repo machine
+  Initialised empty Git repository in ~/acme/.git
+  adding "origin" remote: ipfs://QmY...
+✓ Assembled rad-issues machine
+✓ Assembled rad-diff machine
+
+Your project id is 812396
+See the id of your project by running:
+  rad project show
+
+Run --help to get started
+  rad issue --help
+  rad diff --help
+          </pre>
+          <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$ rad project checkout 812396
+Cloning into ./acme/
+remote: Enumerating objects: 70, done.
+remote: Counting objects: 100% (70/70), done.
+remote: Compressing objects: 100% (40/40), done.
+remote: Total 1472 (delta 30), reused 60 (delta 22), pack-reused 1402
+Receiving objects: 100% (1472/1472), 4.71 MiB | 1.59 MiB/s, done.
+Resolving deltas: 100% (546/546), done.
+adding "origin" remote: ipfs://ipns/QmY...
+
+Created ./acme/.rad-config
+To list the project's issues, run:
+  rad issue list
+          </pre>
+        </div>
+      </div>
+      <div class="try-section">
+        <h2>Discuss an issue</h2>
+        <p>
+          <code>rad issue</code> brings issue management to your terminal with
+          utilities for quick preview and search.
+        </p>
+        <div class="terminal">
+          <video width="640" height="398" autoplay="autoplay">
+            <source
+              src="https://res.cloudinary.com/juliendonck/video/upload/v1549318116/video/term3.mov"
+              type="video/mp4"
+            />
+          </video>
+          <video width="640" height="398" autoplay="autoplay">
+            <source
+              src="https://res.cloudinary.com/juliendonck/video/upload/v1549318116/video/term2.mov"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+      <div class="try-section">
+        <h2>Collaborate on code</h2>
+        <p>
+          <code>rad diff</code> is a way to collaborate on git repositories,
+          completely P2P. Propose changes to a project you follow and track the
+          status of your proposed patches.
+        </p>
+        <div class="terminal">
+          <code>$ rad project init<br />initializing project... </code>
+          <code
+            ><br /><br />$ rad project init<br />initializing project...
+          </code>
+        </div>
+      </div>
+      <h2><br /><br />Check out the community garden</h2>
+    </section>
+
+    <section class="stack">
+      <div class="stack-content">
+        <div class="text">
+          <h1>Radicle Stack</h1>
+          <p>
+            Let’s learn a little more about the technology stack<br />used to
+            create this collaboration suite. <br /><br /><br />
+            A radicle app is a state machine that specifies a complete model of
+            all possible states and the allowable transitions between them.
+            <br /><br />
+            State machines are programmed with the radicle language, a special
+            Lisp dialect designed for P2P replication.
+            <br /><br />
+            If IPFS is for P2P data, radicle is for P2P programs, where state
+            updates are written as entries in a sequentially-hashed event log
+            and the resulting radicle chain is synchronized with your peers over
+            IPFS.
+            <br /><br />
+            We’ll publish details on the complete stack soon, letting you fork
+            and modify our applications, or make your own P2P apps.
+          </p>
+        </div>
+        <div class="illustration"></div>
+      </div>
+    </section>
+
     <footer>
-      <ul>
-        <li><a href="/">About</a></li>
-        <li><a href="/">Oscoin</a></li>
-        <li><a href="/">Blog</a></li>
-        <li><a href="/">Twitter</a></li>
-        <li><a href="/">IRC</a></li>
-      </ul>
+      <div class="footer-content">
+        <ul>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Blog</a></li>
+          <li><a href="/">Twitter</a></li>
+          <br />
+          <li><a href="/">Mastodon</a></li>
+          <li><a href="/">IRC</a></li>
+          <br />
+          <li><a href="/">Email</a></li>
+          <li><a href="/">Code of conduct</a></li>
+          <br />
+          <li><a href="/">Github</a></li>
+          <li><a href="/">Radicle project</a></li>
+          <li><a href="/">License</a></li>
+        </ul>
+        <div class="footer-text">
+          <h1>Get involved</h1>
+          <h2>How to contribute</h2>
+          <div class="footer-grid">
+            <p>
+              The radicle development team hosts our weekly updates on the P2P
+              messaging network secure scuttlebutt. Follow our pub and the
+              #radicle-weekly-updates to see what we’re working on.
+              <br /><br />
+              We dogfood radicle! See the issues instructions to fork the
+              self-hosted radicle repo and add an issue directly to our project.
+            </p>
+            <p>
+              Find project ID here: _____________
+              <br /><br />
+              Or, if you’d prefer, send us an email, or drop in the #radicle
+              channel on the freenode IRC.
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
