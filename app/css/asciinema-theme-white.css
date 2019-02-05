@@ -128,3 +128,5 @@
 .asciinema-theme-white .fg-15 {
   font-weight: bold;
 }
+
+.asciinema-theme-white .control-bar { display: none; }
