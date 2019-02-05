@@ -11,6 +11,9 @@
       media="screen"
       href="css/styles.css"
     />
+    <link rel="stylesheet" type="text/css" href="css/asciinema-player.css" />
+    <link rel="stylesheet" type="text/css" href="css/asciinema-theme-blue.css" />
+    <link rel="stylesheet" type="text/css" href="css/asciinema-theme-white.css" />
   </head>
 
   <body>
@@ -79,12 +82,7 @@
         <h2>Manage your issues</h2>
         <p><code>rad issue</code> brings issue management to your terminal.</p>
         <div class="terminal">
-          <video width="720" height="460" autoplay="autoplay">
-            <source
-              src="https://res.cloudinary.com/juliendonck/video/upload/v1549318116/video/term3.mov"
-              type="video/mp4"
-            />
-          </video>
+          <asciinema-player autoplay loop preload src="video/issues.cast" theme="white"></asciinema-player>
         </div>
       </div>
 
@@ -96,12 +94,7 @@
           proposals.
         </p>
         <div class="terminal">
-          <video width="720" height="460" autoplay="autoplay">
-            <source
-              src="https://res.cloudinary.com/juliendonck/video/upload/v1549318116/video/term2.mov"
-              type="video/mp4"
-            />
-          </video>
+          <asciinema-player autoplay loop preload src="video/issues.cast" theme="blue"></asciinema-player>
         </div>
       </div>
 
@@ -113,12 +106,7 @@
           <code>rad issue</code> and <code>rad diff</code>.
         </p>
         <div class="terminal">
-          <video width="720" height="460" autoplay="autoplay">
-            <source
-              src="https://res.cloudinary.com/juliendonck/video/upload/v1549318116/video/term3.mov"
-              type="video/mp4"
-            />
-          </video>
+          <asciinema-player autoplay loop preload src="video/diff-list.cast"></asciinema-player>
         </div>
       </div>
       <h2 class="guide-cta">
@@ -191,5 +179,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/asciinema-player.js"></script>
   </body>
 </html>
