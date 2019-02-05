@@ -14,22 +14,23 @@
   </head>
 
   <body>
+    <div class="nav-bar">
+      <div class="try-logo">
+        <button>try</button>
+        <code>$ brew install radicle</code>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="">Source </a></li>
+          <li><a href="">Docs</a></li>
+          <li><a href="">Get started</a></li>
+          <li><a href="">Garden</a></li>
+          <li><a href="">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
     <header>
       <div class="left-header">
-        <div class="nav-bar">
-          <div class="try-logo">
-            <button>try</button>
-            <code>$ brew install Radicle</code>
-          </div>
-          <nav>
-            <ul>
-              <li><a href="">Source </a></li>
-              <li><a href="">Install</a></li>
-              <li><a href="">Garden</a></li>
-              <li><a href="">Blog</a></li>
-            </ul>
-          </nav>
-        </div>
         <div class="title">
           <svg width="226" height="48" viewBox="0 0 226 48" fill="none">
             <path
@@ -75,79 +76,27 @@
     <section class="try">
       <h1>Collaborate with Radicle</h1>
       <div class="try-section">
-        <h2>Setup a project</h2>
-        <p>
-          <code>rad project</code> allows you to register your git projects on
-          IPFS and connects your repo to other radicle applications, like
-          <code>rad issue</code> and <code>rad diff</code>.
-        </p>
+        <h2>Manage your issues</h2>
+        <p><code>rad issue</code> brings issue management to your terminal.</p>
         <div class="terminal">
-          <pre>
-$ rad project init
-? What's the name of your project?
-Initialising project with name: acme
-
-✓ Assembled rad-repo machine
-  Initialised empty Git repository in ~/acme/.git
-  adding "origin" remote: ipfs://QmY...
-✓ Assembled rad-issues machine
-✓ Assembled rad-diff machine
-
-Your project id is 812396
-See the id of your project by running:
-  rad project show
-
-Run --help to get started
-  rad issue --help
-  rad diff --help
-          </pre>
-          <pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$ rad project checkout 812396
-Cloning into ./acme/
-remote: Enumerating objects: 70, done.
-remote: Counting objects: 100% (70/70), done.
-remote: Compressing objects: 100% (40/40), done.
-remote: Total 1472 (delta 30), reused 60 (delta 22), pack-reused 1402
-Receiving objects: 100% (1472/1472), 4.71 MiB | 1.59 MiB/s, done.
-Resolving deltas: 100% (546/546), done.
-adding "origin" remote: ipfs://ipns/QmY...
-
-Created ./acme/.rad-config
-To list the project's issues, run:
-  rad issue list
-          </pre>
-        </div>
-      </div>
-      <div class="try-section">
-        <h2>Discuss an issue</h2>
-        <p>
-          <code>rad issue</code> brings issue management to your terminal with
-          utilities for quick preview and search.
-        </p>
-        <div class="terminal">
-          <video width="640" height="398" autoplay="autoplay">
+          <video width="720" height="460" autoplay="autoplay">
             <source
               src="https://res.cloudinary.com/juliendonck/video/upload/v1549318116/video/term3.mov"
               type="video/mp4"
             />
           </video>
-          <video width="640" height="398" autoplay="autoplay">
+        </div>
+      </div>
+
+      <div class="try-section">
+        <h2>Collaborate on code</h2>
+        <p>
+          <code>rad diff</code> is a way to collaborate on git repositories,
+          completely peer-to-peer. Propose patches to any project and track your
+          proposals.
+        </p>
+        <div class="terminal">
+          <video width="720" height="460" autoplay="autoplay">
             <source
               src="https://res.cloudinary.com/juliendonck/video/upload/v1549318116/video/term2.mov"
               type="video/mp4"
@@ -155,21 +104,26 @@ To list the project's issues, run:
           </video>
         </div>
       </div>
+
       <div class="try-section">
-        <h2>Collaborate on code</h2>
+        <h2>Setup a project</h2>
         <p>
-          <code>rad diff</code> is a way to collaborate on git repositories,
-          completely P2P. Propose changes to a project you follow and track the
-          status of your proposed patches.
+          <code>rad project</code> allows you to register your git projects on
+          IPFS and connects your repo to other radicle applications, like
+          <code>rad issue</code> and <code>rad diff</code>.
         </p>
         <div class="terminal">
-          <code>$ rad project init<br />initializing project... </code>
-          <code
-            ><br /><br />$ rad project init<br />initializing project...
-          </code>
+          <video width="720" height="460" autoplay="autoplay">
+            <source
+              src="https://res.cloudinary.com/juliendonck/video/upload/v1549318116/video/term3.mov"
+              type="video/mp4"
+            />
+          </video>
         </div>
       </div>
-      <h2><br /><br />Check out the community garden</h2>
+      <h2 class="guide-cta">
+        <a href="">Follow our guide to learn radicle</a>
+      </h2>
     </section>
 
     <section class="stack">
