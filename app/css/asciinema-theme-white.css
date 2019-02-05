@@ -2,6 +2,7 @@
   color: #000;                    /* default text color */
   background-color: #fff;         /* terminal background color */
   border-color: #fff;
+  font-family: 'FoundersGroteskMono';
 }
 .asciinema-theme-white .fg-bg {    /* inverse for default text color */
   color: #000;
