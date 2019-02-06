@@ -224,6 +224,7 @@ header {
 .nav-bar {
   display: flex;
   justify-content: space-between;
+  z-index: 10;
   height: 64px;
   position: sticky;
   top: 0;
@@ -301,14 +302,14 @@ nav ul {
     max-width: 640px; }
   .try-section .terminal {
     margin-top: 32px;
-    width: 720px;
-    height: 454px;
+    width: 740px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white; }
-    .try-section .terminal:nth-of-type(2n) {
-      background-color: #5555ff; }
+    background-color: #ffffff; }
+  .try-section .blue {
+    background-color: #5555ff; }
 
 .guide-cta {
   margin-top: 64px;
@@ -319,24 +320,22 @@ nav ul {
 .stack {
   background-color: #ff5555;
   color: #000000;
-  padding: 96px 0; }
+  padding: 96px; }
   .stack h1 {
     padding-bottom: 16px; }
   .stack .stack-content {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-column-gap: 48px;
+    grid-column-gap: 64px;
     max-width: 1440px;
     margin: 0 auto; }
-  .stack .text {
-    padding-left: 48px; }
   .stack .illustration {
-    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549290176/matisse_m7bgdy.png");
+    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549390686/stack3_w39cfo.png");
     background-position: center;
     /* Center the image */
     background-repeat: no-repeat;
     /* Do not repeat the image */
-    background-size: cover;
+    background-size: contain;
     /* Resize the background image to cover the entire container */ }
 
 footer {
@@ -354,10 +353,10 @@ footer {
   footer .footer-text {
     background-color: #ffffff;
     color: #000000;
-    padding: 64px; }
+    padding: 48px 64px; }
     footer .footer-text h2 {
       color: #ff5555;
-      padding: 16px 0 24px 0; }
+      padding: 32px 0 24px 0; }
   footer .footer-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
