@@ -77,6 +77,16 @@ gulp.task('css', function() {
   return gulp.src('app/css/**/*')
     .pipe(gulp.dest('dist/css'))
 })
+// Copying videos
+gulp.task('video', function() {
+  return gulp.src('app/video/**/*')
+    .pipe(gulp.dest('dist/video'))
+})
+// Copying js
+gulp.task('js', function() {
+  return gulp.src('app/js/**/*')
+    .pipe(gulp.dest('dist/js'))
+})
 
 // Cleaning
 gulp.task('clean', function() {
@@ -86,7 +96,7 @@ gulp.task('clean', function() {
 })
 
 gulp.task('clean:dist', function() {
-  return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
+  return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*', '!dist/video', '!dist/video/**/*']);
 });
 
 // Build Sequences
@@ -102,7 +112,7 @@ gulp.task('build', function(callback) {
   runSequence(
     'clean:dist',
     'sass',
-    ['useref', 'images', 'fonts', 'css'],
+    ['useref', 'images', 'fonts', 'css', 'js', 'video'],
     callback
   )
 })
