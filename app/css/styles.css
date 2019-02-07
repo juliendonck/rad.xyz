@@ -317,6 +317,12 @@ nav ul {
   .guide-cta:hover {
     color: #ff5555; }
 
+.float {
+  background-color: #ff5555; }
+  .float .float path {
+    stroke: black;
+    stroke-width: 2px; }
+
 .stack {
   background-color: #ff5555;
   color: #000000;
