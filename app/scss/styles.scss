@@ -11,13 +11,10 @@
   background: $blue;
 }
 
-// Specific styles
-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 405px;
-  border-bottom: 1px solid $black;
-}
+// Shared styles
+// -------------
+
+// Nav bar
 
 .nav-bar {
   display: flex;
@@ -49,6 +46,38 @@ nav ul {
     margin-left: 20px;
   }
 }
+
+// Footer
+
+.global-footer {
+  background-color: $red;
+  color: $white;
+  .global-footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 48px;
+    ul {
+      li {
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+// Home Page
+// ---------
+
+// Header styles
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 405px;
+  border-bottom: 1px solid $black;
+}
+
 .left-header {
   padding: 18px;
   .title {
@@ -146,9 +175,9 @@ nav ul {
   }
   .illustration {
     background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549390686/stack3_w39cfo.png");
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: contain; /* Resize the background image to cover the entire container */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
@@ -180,5 +209,45 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 58px;
+  }
+}
+
+// doc styles
+
+.docs-content {
+  display: grid;
+  grid-template-columns: minmax(min-content, 320px) minmax(min-content, auto);
+  grid-template-rows: minmax(min-content, 1fr);
+  background-color: $black;
+}
+
+aside {
+  position: fixed;
+  top: 64px;
+  height: vh;
+  grid-column: 1;
+  grid-row: 2;
+  padding: 48px 36px;
+  color: $white;
+  li {
+    line-height: 36px;
+    a:hover {
+      color: $blue;
+    }
+  }
+}
+
+main {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  padding: 0 48px 48px 48px;
+  color: $white;
+  h1 {
+    color: $blue;
+    padding-top: 112px;
+  }
+  h2 {
+    padding: 64px 0 24px 0;
   }
 }

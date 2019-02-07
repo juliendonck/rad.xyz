@@ -215,12 +215,6 @@ a:hover {
 ::selection {
   background: #5555ff; }
 
-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 405px;
-  border-bottom: 1px solid #000000; }
-
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -247,6 +241,24 @@ nav ul {
     line-height: 22px;
     color: #ff5555;
     margin-left: 20px; }
+
+.global-footer {
+  background-color: #ff5555;
+  color: #ffffff; }
+  .global-footer .global-footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 48px; }
+    .global-footer .global-footer-content ul li {
+      line-height: 24px; }
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 405px;
+  border-bottom: 1px solid #000000; }
 
 .left-header {
   padding: 18px; }
@@ -332,11 +344,8 @@ nav ul {
   .stack .illustration {
     background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549390686/stack3_w39cfo.png");
     background-position: center;
-    /* Center the image */
     background-repeat: no-repeat;
-    /* Do not repeat the image */
-    background-size: contain;
-    /* Resize the background image to cover the entire container */ }
+    background-size: contain; }
 
 footer {
   background-color: #ff5555;
@@ -361,3 +370,34 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 58px; }
+
+.docs-content {
+  display: grid;
+  grid-template-columns: minmax(min-content, 320px) minmax(min-content, auto);
+  grid-template-rows: minmax(min-content, 1fr);
+  background-color: #000000; }
+
+aside {
+  position: fixed;
+  top: 64px;
+  height: vh;
+  grid-column: 1;
+  grid-row: 2;
+  padding: 48px 36px;
+  color: #ffffff; }
+  aside li {
+    line-height: 36px; }
+    aside li a:hover {
+      color: #5555ff; }
+
+main {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  padding: 0 48px 48px 48px;
+  color: #ffffff; }
+  main h1 {
+    color: #5555ff;
+    padding-top: 112px; }
+  main h2 {
+    padding: 64px 0 24px 0; }
