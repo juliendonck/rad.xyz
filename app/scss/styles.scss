@@ -159,6 +159,15 @@ header {
   }
 }
 
+.float {
+	background-color: #ff5555;
+
+  .float path {
+    stroke: black;
+    stroke-width: 2px;
+  }
+}
+
 .stack {
   background-color: $red;
   color: $black;
