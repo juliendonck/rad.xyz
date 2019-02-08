@@ -160,7 +160,7 @@ header {
 }
 
 .float {
-	background-color: #ff5555;
+  background-color: #ff5555;
 
   .float path {
     stroke: black;
@@ -177,13 +177,13 @@ header {
   }
   .stack-content {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 64px;
     max-width: 1440px;
     margin: 0 auto;
   }
   .illustration {
-    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549390686/stack3_w39cfo.png");
+    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549627170/stack5_adsy9k.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
