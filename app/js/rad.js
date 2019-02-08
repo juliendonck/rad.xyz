@@ -51,3 +51,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
   animate();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var prog = document.querySelectorAll("#prog .overlay")
+  var term = document.querySelectorAll("#term .overlay")
+
+  var peer = document.querySelectorAll("#peer .overlay")
+  var t = 0;
+  let then = Date.now();
+  const interval = 120;
+  let elapsed;
+
+  function type() {
+    now = Date.now();
+    elapsed = now - then;
+
+    if (elapsed > interval) {
+      peer[t].setAttribute("style", "display: none");
+
+      if(t < peer.length-1) {
+        peer[t+1].setAttribute("style", "display: block");
+        t++;
+      } else {
+        t = 0;
+      };
+
+      then = now - (elapsed % interval);
+    }
+
+    requestAnimationFrame(type);
+  }
+
+  requestAnimationFrame(type);
+});

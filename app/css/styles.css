@@ -291,7 +291,8 @@ header {
   grid-column-gap: 80px;
   padding: 40px 40px 80px 40px; }
   .collab h2 {
-    padding-bottom: 16px; }
+    padding-bottom: 16px;
+    background: #fff; }
 
 .try {
   display: flex;
