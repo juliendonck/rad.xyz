@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var surge = require('gulp-surge')
 var browserSync = require('browser-sync');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
@@ -71,6 +72,21 @@ gulp.task('fonts', function() {
   return gulp.src('app/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'))
 })
+// Copying css
+gulp.task('css', function() {
+  return gulp.src('app/css/**/*')
+    .pipe(gulp.dest('dist/css'))
+})
+// Copying videos
+gulp.task('video', function() {
+  return gulp.src('app/video/**/*')
+    .pipe(gulp.dest('dist/video'))
+})
+// Copying js
+gulp.task('js', function() {
+  return gulp.src('app/js/**/*')
+    .pipe(gulp.dest('dist/js'))
+})
 
 // Cleaning
 gulp.task('clean', function() {
@@ -80,7 +96,7 @@ gulp.task('clean', function() {
 })
 
 gulp.task('clean:dist', function() {
-  return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
+  return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*', '!dist/video', '!dist/video/**/*']);
 });
 
 // Build Sequences
@@ -96,7 +112,14 @@ gulp.task('build', function(callback) {
   runSequence(
     'clean:dist',
     'sass',
-    ['useref', 'images', 'fonts'],
+    ['useref', 'images', 'fonts', 'css', 'js', 'video'],
     callback
   )
+})
+
+gulp.task('deploy', [], function () {
+  return surge({
+    project: './dist',         // Path to your static build directory
+    domain: 'reflective-toy.surge.sh'  // Your domain or Surge subdomain
+  })
 })

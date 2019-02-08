@@ -1,89 +1,262 @@
 // imports
 @import "reset";
-
-// load fonts
-@font-face {
-  font-family: GTAmericaMono;
-  src: url("../fonts/GT-America-Mono-Regular.otf") format("opentype");
-}
-@font-face {
-  font-family: GTAmericaMonoMedium;
-  src: url("../fonts/GT-America-Mono-Medium.otf") format("opentype");
-}
+@import "colors";
+@import "fonts";
 
 // selection color
 ::-moz-selection {
-  background: yellow;
+  background: $blue;
 }
 ::selection {
-  background: yellow;
+  background: $blue;
 }
 
-body {
-  background-color: white;
-  color: #28333d;
-  font-family: GTAmericaMono, monospace;
-  line-height: 135%;
-}
+// Shared styles
+// -------------
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: GTAmericaMonoMedium;
-}
+// Nav bar
 
-header {
+.nav-bar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  z-index: 10;
   height: 64px;
-  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  background-color: $white;
+  padding: 18px;
 }
-
+.try-logo {
+  display: flex;
+  align-items: center;
+  button {
+    margin-right: 12px;
+  }
+  code {
+    font-size: 15px;
+    color: $blue;
+  }
+}
 nav ul {
   display: flex;
   li {
-    margin-left: 36px;
+    font-size: 16px;
+    line-height: 22px;
+    color: $red;
+    margin-left: 20px;
   }
 }
 
-a {
-  &.active {
-    font-family: GTAmericaMonoMedium;
-    color: #6e41e0;
-  }
-  &:hover {
-    text-decoration: underline;
+// Footer
+
+.global-footer {
+  background-color: $red;
+  color: $white;
+  .global-footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 48px;
+    ul {
+      li {
+        line-height: 24px;
+      }
+    }
   }
 }
 
-.content {
-  padding: 0;
-  font-size: 24px;
+// Home Page
+// ---------
+
+// Header styles
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 405px;
+  border-bottom: 1px solid $black;
 }
 
-.content-block {
-  height: 480px;
+.left-header {
+  padding: 18px;
+  .title {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px;
+    h1 {
+      font-size: 28px;
+      line-height: 38px;
+      text-align: center;
+      margin-top: 42px;
+    }
+  }
+}
+
+.right-header {
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549290176/matisse_m7bgdy.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+// section styles
+
+.collab {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 80px;
+  padding: 40px 40px 80px 40px;
+  h2 {
+    padding-bottom: 16px;
+  }
+}
+
+.try {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  &:nth-child(odd) {
-    background-color: #ced8e1;
+  background-color: $black;
+  color: $white;
+  text-align: center;
+  padding: 100px 0 72px 0;
+}
+
+.try-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    color: $blue;
+    padding-top: 64px;
+    padding-bottom: 24px;
+  }
+  p {
+    max-width: 640px;
+  }
+  .terminal {
+    margin-top: 32px;
+    width: 740px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+  }
+  .blue {
+    background-color: $blue;
+  }
+}
+.guide-cta {
+  margin-top: 64px;
+  text-decoration: underline;
+  &:hover {
+    color: $red;
+  }
+}
+
+.float {
+  background-color: #ff5555;
+
+  .float path {
+    stroke: black;
+    stroke-width: 2px;
+  }
+}
+
+.stack {
+  background-color: $red;
+  color: $black;
+  padding: 96px;
+  h1 {
+    padding-bottom: 16px;
+  }
+  .stack-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 64px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .illustration {
+    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549627170/stack5_adsy9k.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
 footer {
-  padding: 64px 24px;
-  background-color: #28333d;
-  color: #f7f7f2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: $red;
+  color: $white;
   ul {
-    display: flex;
+    padding-left: 48px;
     li {
-      margin: 0 12px;
+      line-height: 24px;
     }
+  }
+  .footer-content {
+    margin: 0 auto;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  .footer-text {
+    background-color: $white;
+    color: $black;
+    padding: 48px 64px;
+    h2 {
+      color: $red;
+      padding: 32px 0 24px 0;
+    }
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 58px;
+  }
+}
+
+// doc styles
+
+.docs-content {
+  display: grid;
+  grid-template-columns: minmax(min-content, 320px) minmax(min-content, auto);
+  grid-template-rows: minmax(min-content, 1fr);
+  background-color: $black;
+}
+
+aside {
+  position: fixed;
+  top: 64px;
+  height: vh;
+  grid-column: 1;
+  grid-row: 2;
+  padding: 48px 36px;
+  color: $white;
+  li {
+    line-height: 36px;
+    a:hover {
+      color: $blue;
+    }
+  }
+}
+
+main {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  padding: 0 48px 48px 48px;
+  color: $white;
+  h1 {
+    color: $blue;
+    padding-top: 112px;
+  }
+  h2 {
+    padding: 64px 0 24px 0;
   }
 }
