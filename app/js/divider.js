@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let yoff = 0;
 
-  let interval = 1000 / 60;
+  let interval = 1000 / 30;
   let then = Date.now();
   let start = then;
   let elapsed;
@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
       let xs = [];
 
       for (var x = 0; x < width; x++) {
-        let n = Math.abs(noise.perlin2(xoff, yoff))
-        let y = 180 * n
+        let n = noise.perlin2(xoff, yoff)
+        let y = 75 - (75 * n)
 
         xs.push([x, y]);
 
