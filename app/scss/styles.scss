@@ -114,6 +114,11 @@ header {
   h2 {
     padding-bottom: 16px;
     background: #fff;
+    width: 25vw;
+  }
+  .overlay {
+    position: absolute;
+    display: none;
   }
 }
 

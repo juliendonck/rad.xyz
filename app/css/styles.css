@@ -292,7 +292,11 @@ header {
   padding: 40px 40px 80px 40px; }
   .collab h2 {
     padding-bottom: 16px;
-    background: #fff; }
+    background: #fff;
+    width: 25vw; }
+  .collab .overlay {
+    position: absolute;
+    display: none; }
 
 .try {
   display: flex;
