@@ -53,30 +53,108 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  var prog = document.querySelectorAll("#prog .overlay")
-  var term = document.querySelectorAll("#term .overlay")
+  const selectors = [
+    "#peer h2",
+    "#prog h2",
+    "#term h2",
+  ];
+  const lines = [
+    [
+      "Pr",
+      "Per",
+      "Peer",
+      "Peeer",
+      "Peeeer",
+      "Peeeeer",
+      "Peeeeeer",
+      "Peeeeeeer",
+      "Peeeeeeeer",
+      "Peeeeeeeeer",
+      "Peeeeeeeeeer",
+      "Peeeeeeeeeeer",
+      "Peeeee—eeeer",
+      "Peeee——eeeer",
+      "Peee————eeer",
+      "Peer————peer",
+      "Peer—t——peer",
+      "Peer–to–peer",
+      "Peer–to–peer",
+      "Peer–to–peer",
+      "Peer–to–peer",
+      "Peer–to–peer",
+      "Peer–to–peer",
+    ],
+    [
+      "–––––a––a–––",
+      "–––––a––ab––",
+      "–––––a––ab–e",
+      "–––g–a––ab–e",
+      "–––g–a––able",
+      "–––g–ammable",
+      "––og–ammable",
+      "–rogrammable",
+      "Programmable",
+      "Programmable",
+      "Programmable",
+      "Programmable",
+      "Programmable",
+    ],
+    [
+        "&gt;",
+        "&gt;▌",
+        "&gt;T",
+        "&gt;Te▌",
+        "&gt;Ter",
+        "&gt;Term▌",
+        "&gt;Termi",
+        "&gt;Termin▌",
+        "&gt;Termina",
+        "&gt;Terminal▌",
+        "&gt;Terminal–",
+        "&gt;Terminal–f▌",
+        "&gt;Terminal–fi",
+        "&gt;Terminal–fir▌",
+        "&gt;Terminal–firs",
+        "&gt;Terminal–first▌",
+        "&gt;Terminal–first",
+        "Terminal–first",
+        "Terminal–first",
+        "Terminal–first",
+        "Terminal–first",
+        "Terminal–first",
+    ],
+  ];
 
-  var peer = document.querySelectorAll("#peer .overlay")
-  var t = 0;
-  let then = Date.now();
   const interval = 120;
+  let then = Date.now();
   let elapsed;
+  let idxLines = 0;
+  let idxSelectors = 0;
+  let currentEl = document.querySelector(selectors[idxSelectors]);
+  let currentLines = lines[idxSelectors];
 
   function type() {
     now = Date.now();
     elapsed = now - then;
 
     if (elapsed > interval) {
-      peer[t].setAttribute("style", "display: none");
-
-      if(t < peer.length-1) {
-        peer[t+1].setAttribute("style", "display: block");
-        t++;
-      } else {
-        t = 0;
-      };
-
+      currentEl.innerHTML = currentLines[idxLines];
       then = now - (elapsed % interval);
+      idxLines += 1;
+
+      if (idxLines >= currentLines.length -1) {
+        idxLines = 0;
+        idxSelectors += 1;
+      }
+
+      if (idxSelectors >= selectors.length) {
+        idxSelectors = 0;
+      }
+
+      if (idxLines === 0) {
+        currentEl = document.querySelector(selectors[idxSelectors]);
+        currentLines = lines[idxSelectors];
+      }
     }
 
     requestAnimationFrame(type);
