@@ -1,8 +1,15 @@
 function animateDivider(el) {
-  let svg = el.querySelector('svg');
-  let path = el.querySelector('svg path');
   let width = el.clientWidth;
   let isLine = el.classList.contains('line');
+
+  let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  let path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+
+  svg.setAttribute('width', '100%');
+  svg.setAttribute('height', '150px');
+
+  svg.appendChild(path);
+  el.appendChild(svg);
 
   let yoff = 0;
 
