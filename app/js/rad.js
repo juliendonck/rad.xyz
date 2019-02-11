@@ -1,7 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
-  let divider = document.getElementById('divider');
-  let path = divider.querySelectorAll('path')[0];
-  let width = divider.parentNode.clientWidth;
+function animateDivider(el) {
+  let svg = el.querySelector('svg');
+  let path = el.querySelector('svg path');
+  let width = el.clientWidth;
+  let isLine = el.classList.contains('line');
 
   let yoff = 0;
 
@@ -10,12 +11,12 @@ document.addEventListener('DOMContentLoaded', function () {
   let start = then;
   let elapsed;
 
-  noise.seed(Math.random());
+  let noise = Noise(Math.random());
 
   function animate() {
-    if (width !== divider.parentNode.clientWidth) {
-      width = divider.parentNode.clientWidth;
-      divider.setAttribute('viewBox', '0 0 ' + width + ' 500');
+    if (width !== el.clientWidth) {
+      width = el.clientWidth;
+      svg.setAttribute('viewBox', '0 0 ' + width + ' 500');
     }
 
     now = Date.now();
@@ -37,9 +38,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
       yoff += 0.005;
 
-      var d = 'M0,0 ' + width + ',0 ' + width + ',250 ' + xs.reverse().map(p => {
+      let prefix = 'M0,0 ' + width + ',0 ';
+
+      if (isLine) {
+        prefix = 'M';
+      }
+
+      var d = prefix + xs.reverse().map(p => {
         return p[0] + ',' + p[1];
-      }) + ' 0,250';
+      });
 
       path.setAttribute('d', d);
 
@@ -50,6 +57,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   animate();
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const dividers = document.querySelectorAll('section.divider');
+
+  dividers.forEach(animateDivider);
 });
 
 document.addEventListener('DOMContentLoaded', function () {

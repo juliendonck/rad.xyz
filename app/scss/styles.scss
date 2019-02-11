@@ -165,12 +165,22 @@ header {
   }
 }
 
-.float {
+.divider {
   background-color: #ff5555;
 
-  .float path {
+  svg path {
+    fill: black;
     stroke: black;
     stroke-width: 2px;
+  }
+
+  &.white svg path {
+    fill: white;
+    stroke: white;
+  }
+
+  &.line svg path {
+    fill: transparent;
   }
 }
 
