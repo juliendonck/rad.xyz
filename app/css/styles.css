@@ -397,11 +397,17 @@ header {
   .guide-cta:hover {
     color: #ff5555; }
 
-.float {
+.divider {
   background-color: #ff5555; }
-  .float .float path {
+  .divider svg path {
+    fill: black;
     stroke: black;
     stroke-width: 2px; }
+  .divider.white svg path {
+    fill: white;
+    stroke: white; }
+  .divider.line svg path {
+    fill: transparent; }
 
 .stack {
   background-color: #ff5555;
