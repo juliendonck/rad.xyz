@@ -1,0 +1,58 @@
+// doc styles
+
+.docs-content {
+  display: grid;
+  grid-template-columns: minmax(min-content, 320px) minmax(min-content, auto);
+  grid-template-rows: minmax(min-content, 1fr);
+  background-color: $black;
+}
+
+aside {
+  position: fixed;
+  top: 64px;
+  height: vh;
+  grid-column: 1;
+  grid-row: 2;
+  padding: 48px 36px;
+  color: $white;
+  li {
+    line-height: 36px;
+    a:hover {
+      color: $blue;
+    }
+  }
+}
+
+main {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  padding: 0 48px 48px 48px;
+  color: $white;
+  h1 {
+    color: $blue;
+    padding-top: 112px;
+  }
+  h2 {
+    padding: 64px 0 24px 0;
+  }
+}
+
+// Footer
+
+.global-footer {
+  background-color: $red;
+  color: $white;
+  .global-footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 48px;
+    ul {
+      li {
+        line-height: 24px;
+      }
+    }
+  }
+}

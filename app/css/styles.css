@@ -209,6 +209,49 @@ a.active {
 a:hover {
   text-decoration: underline; }
 
+.docs-content {
+  display: grid;
+  grid-template-columns: minmax(min-content, 320px) minmax(min-content, auto);
+  grid-template-rows: minmax(min-content, 1fr);
+  background-color: #000000; }
+
+aside {
+  position: fixed;
+  top: 64px;
+  height: vh;
+  grid-column: 1;
+  grid-row: 2;
+  padding: 48px 36px;
+  color: #ffffff; }
+  aside li {
+    line-height: 36px; }
+    aside li a:hover {
+      color: #5555ff; }
+
+main {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  padding: 0 48px 48px 48px;
+  color: #ffffff; }
+  main h1 {
+    color: #5555ff;
+    padding-top: 112px; }
+  main h2 {
+    padding: 64px 0 24px 0; }
+
+.global-footer {
+  background-color: #ff5555;
+  color: #ffffff; }
+  .global-footer .global-footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 48px; }
+    .global-footer .global-footer-content ul li {
+      line-height: 24px; }
+
 ::-moz-selection {
   background: #5555ff; }
 
@@ -242,26 +285,19 @@ nav ul {
     color: #ff5555;
     margin-left: 20px; }
 
-.global-footer {
-  background-color: #ff5555;
-  color: #ffffff; }
-  .global-footer .global-footer-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 0 auto;
-    max-width: 1440px;
-    padding: 48px; }
-    .global-footer .global-footer-content ul li {
-      line-height: 24px; }
-
 header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 405px;
   border-bottom: 1px solid #000000; }
+  @media (max-width: 960px) {
+    header {
+      grid-template-columns: 1fr;
+      grid-template-rows: 45vw 45vw;
+      border-bottom: none; } }
 
 .left-header {
-  padding: 18px; }
+  padding: 16px; }
   .left-header .title {
     display: flex;
     height: 100%;
@@ -274,29 +310,56 @@ header {
       line-height: 38px;
       text-align: center;
       margin-top: 42px; }
+    .left-header .title .logo {
+      width: 226px;
+      height: 48px;
+      background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549882894/radicle-logo-2_el4fmz.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain; }
+    @media (max-width: 720px) {
+      .left-header .title {
+        padding: 0; }
+        .left-header .title h1 {
+          font-size: 18px;
+          line-height: 24px;
+          margin-top: 24px; }
+        .left-header .title .logo {
+          width: 166px;
+          height: 36px; } }
 
 .right-header {
-  background-image: url("https://math-practice.github.io/radicle/home-demo/metaballs.gif");
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549799165/metaballs_oqeuhf.gif");
   background-position: center;
-  /* Center the image */
   background-repeat: no-repeat;
-  /* Do not repeat the image */
-  background-size: cover;
-  /* Resize the background image to cover the entire container */ }
+  background-size: cover; }
 
 .collab {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-column-gap: 80px;
-  padding: 40px 40px 80px 40px; }
+  grid-column-gap: 48px;
+  padding: 64px 40px; }
   .collab h2 {
     padding-bottom: 16px;
     background: #fff;
-    width: 25vw; }
+    width: auto; }
   .collab .overlay {
     position: absolute;
     display: none; }
+  @media (max-width: 960px) {
+    .collab {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+      grid-row-gap: 64px; }
+      .collab div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 80vw; }
+        .collab div p {
+          text-align: center; } }
 
 .try {
   display: flex;
@@ -305,7 +368,7 @@ header {
   background-color: #000000;
   color: #ffffff;
   text-align: center;
-  padding: 100px 0 72px 0; }
+  padding: 100px 48px 72px 48px; }
 
 .try-section {
   display: flex;
@@ -316,11 +379,11 @@ header {
     padding-top: 64px;
     padding-bottom: 24px; }
   .try-section p {
-    max-width: 640px; }
+    max-width: 680px; }
   .try-section .terminal {
     margin-top: 32px;
-    width: 740px;
-    height: 500px;
+    width: 680px;
+    height: 240px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -343,7 +406,7 @@ header {
 .stack {
   background-color: #ff5555;
   color: #000000;
-  padding: 96px; }
+  padding: 48px; }
   .stack h1 {
     padding-bottom: 16px; }
   .stack .stack-content {
@@ -352,6 +415,12 @@ header {
     grid-column-gap: 64px;
     max-width: 1440px;
     margin: 0 auto; }
+    @media (max-width: 960px) {
+      .stack .stack-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto calc((90vw) / 1122 * 445);
+        grid-column-gap: 0px;
+        grid-row-gap: 64px; } }
   .stack .illustration {
     background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549627170/stack5_adsy9k.svg");
     background-position: center;
@@ -359,56 +428,24 @@ header {
     background-size: contain; }
 
 footer {
-  background-color: #ff5555;
-  color: #ffffff; }
-  footer ul {
-    padding-left: 48px; }
-    footer ul li {
-      line-height: 24px; }
+  background-color: #ffffff;
+  color: #000000; }
   footer .footer-content {
+    padding: 64px 48px;
     margin: 0 auto;
     max-width: 1440px;
     display: grid;
     grid-template-columns: 1fr 3fr; }
-  footer .footer-text {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 48px 64px; }
-    footer .footer-text h2 {
-      color: #ff5555;
-      padding: 32px 0 24px 0; }
+    footer .footer-content li {
+      line-height: 24px; }
+  footer .footer-text h2 {
+    color: #ff5555;
+    padding: 32px 0 24px 0; }
+  footer .footer-text p:last-child {
+    margin-top: 48px; }
+    footer .footer-text p:last-child a {
+      color: #5555ff; }
   footer .footer-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 58px; }
-
-.docs-content {
-  display: grid;
-  grid-template-columns: minmax(min-content, 320px) minmax(min-content, auto);
-  grid-template-rows: minmax(min-content, 1fr);
-  background-color: #000000; }
-
-aside {
-  position: fixed;
-  top: 64px;
-  height: vh;
-  grid-column: 1;
-  grid-row: 2;
-  padding: 48px 36px;
-  color: #ffffff; }
-  aside li {
-    line-height: 36px; }
-    aside li a:hover {
-      color: #5555ff; }
-
-main {
-  grid-column: 2;
-  grid-row: 2;
-  align-self: start;
-  padding: 0 48px 48px 48px;
-  color: #ffffff; }
-  main h1 {
-    color: #5555ff;
-    padding-top: 112px; }
-  main h2 {
-    padding: 64px 0 24px 0; }

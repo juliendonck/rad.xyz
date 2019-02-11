@@ -2,6 +2,7 @@
 @import "reset";
 @import "colors";
 @import "fonts";
+@import "docs";
 
 // selection color
 ::-moz-selection {
@@ -47,25 +48,6 @@ nav ul {
   }
 }
 
-// Footer
-
-.global-footer {
-  background-color: $red;
-  color: $white;
-  .global-footer-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 0 auto;
-    max-width: 1440px;
-    padding: 48px;
-    ul {
-      li {
-        line-height: 24px;
-      }
-    }
-  }
-}
-
 // Home Page
 // ---------
 
@@ -76,10 +58,15 @@ header {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 405px;
   border-bottom: 1px solid $black;
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 45vw 45vw;
+    border-bottom: none;
+  }
 }
 
 .left-header {
-  padding: 18px;
+  padding: 16px;
   .title {
     display: flex;
     height: 100%;
@@ -87,20 +74,41 @@ header {
     align-items: center;
     justify-content: center;
     padding: 64px;
+
     h1 {
       font-size: 28px;
       line-height: 38px;
       text-align: center;
       margin-top: 42px;
     }
+    .logo {
+      width: 226px;
+      height: 48px;
+      background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549882894/radicle-logo-2_el4fmz.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    @media (max-width: 720px) {
+      padding: 0;
+      h1 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 24px;
+      }
+      .logo {
+        width: 166px;
+        height: 36px;
+      }
+    }
   }
 }
 
 .right-header {
-  background-image: url("https://math-practice.github.io/radicle/home-demo/metaballs.gif");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549799165/metaballs_oqeuhf.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 // section styles
@@ -109,16 +117,32 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-column-gap: 80px;
-  padding: 40px 40px 80px 40px;
+  grid-column-gap: 48px;
+  padding: 64px 40px;
   h2 {
     padding-bottom: 16px;
     background: #fff;
-    width: 25vw;
+    width: auto;
   }
   .overlay {
     position: absolute;
     display: none;
+  }
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 64px;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      width: 80vw;
+
+      p {
+        text-align: center;
+      }
+    }
   }
 }
 
@@ -129,7 +153,7 @@ header {
   background-color: $black;
   color: $white;
   text-align: center;
-  padding: 100px 0 72px 0;
+  padding: 100px 48px 72px 48px;
 }
 
 .try-section {
@@ -142,12 +166,12 @@ header {
     padding-bottom: 24px;
   }
   p {
-    max-width: 640px;
+    max-width: 680px;
   }
   .terminal {
     margin-top: 32px;
-    width: 740px;
-    height: 500px;
+    width: 680px;
+    height: 240px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,6 +181,7 @@ header {
     background-color: $blue;
   }
 }
+
 .guide-cta {
   margin-top: 64px;
   text-decoration: underline;
@@ -177,7 +202,7 @@ header {
 .stack {
   background-color: $red;
   color: $black;
-  padding: 96px;
+  padding: 48px;
   h1 {
     padding-bottom: 16px;
   }
@@ -187,6 +212,12 @@ header {
     grid-column-gap: 64px;
     max-width: 1440px;
     margin: 0 auto;
+    @media (max-width: 960px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto calc((90vw) / 1122 * 445);
+      grid-column-gap: 0px;
+      grid-row-gap: 64px;
+    }
   }
   .illustration {
     background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549627170/stack5_adsy9k.svg");
@@ -197,72 +228,34 @@ header {
 }
 
 footer {
-  background-color: $red;
-  color: $white;
-  ul {
-    padding-left: 48px;
-    li {
-      line-height: 24px;
-    }
-  }
+  background-color: $white;
+  color: $black;
+
   .footer-content {
+    padding: 64px 48px;
     margin: 0 auto;
     max-width: 1440px;
     display: grid;
     grid-template-columns: 1fr 3fr;
+    li {
+      line-height: 24px;
+    }
   }
   .footer-text {
-    background-color: $white;
-    color: $black;
-    padding: 48px 64px;
     h2 {
       color: $red;
       padding: 32px 0 24px 0;
+    }
+    p:last-child {
+      margin-top: 48px;
+      a {
+        color: $blue;
+      }
     }
   }
   .footer-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 58px;
-  }
-}
-
-// doc styles
-
-.docs-content {
-  display: grid;
-  grid-template-columns: minmax(min-content, 320px) minmax(min-content, auto);
-  grid-template-rows: minmax(min-content, 1fr);
-  background-color: $black;
-}
-
-aside {
-  position: fixed;
-  top: 64px;
-  height: vh;
-  grid-column: 1;
-  grid-row: 2;
-  padding: 48px 36px;
-  color: $white;
-  li {
-    line-height: 36px;
-    a:hover {
-      color: $blue;
-    }
-  }
-}
-
-main {
-  grid-column: 2;
-  grid-row: 2;
-  align-self: start;
-  padding: 0 48px 48px 48px;
-  color: $white;
-  h1 {
-    color: $blue;
-    padding-top: 112px;
-  }
-  h2 {
-    padding: 64px 0 24px 0;
   }
 }
