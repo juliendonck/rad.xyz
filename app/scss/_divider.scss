@@ -1,0 +1,32 @@
+.divider {
+  background-color: #ff5555;
+
+  svg path {
+    fill: $black;
+    stroke: $black;
+    stroke-width: 1px;
+  }
+
+  &.white {
+    background-color: $white;
+    svg path {
+      fill: #ff5555;
+      stroke: #ff5555;
+    }
+  }
+
+  &.line {
+    svg path {
+      fill: transparent;
+      stroke: $black;
+    }
+    &.opacity {
+      opacity: 0.2;
+    }
+  }
+  &.footer {
+    @media (min-width: 980px) {
+      display: none;
+    }
+  }
+}
