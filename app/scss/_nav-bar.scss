@@ -1,0 +1,47 @@
+// Nav bar
+// nav styles
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 106px 1fr;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+  padding: 0 18px;
+  position: fixed;
+  top: -64px;
+  left: 0;
+  z-index: 10;
+  background-color: $white;
+  border-bottom: 1px solid rgba($black, 0.2);
+  transition: top 0.2s;
+}
+.try-logo {
+  display: flex;
+  align-items: center;
+  button {
+    margin-right: 12px;
+  }
+  code {
+    font-size: 15px;
+    color: $blue;
+  }
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  li {
+    font-size: 16px;
+    color: $red;
+    margin-left: 20px;
+  }
+}
+
+.rad-nav-logo {
+  width: 106px;
+  height: 24px;
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549882894/radicle-logo-2_el4fmz.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

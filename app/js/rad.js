@@ -182,3 +182,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   requestAnimationFrame(type);
 });
+
+
+navBar = document.getElementById("nav-bar");
+
+window.addEventListener("scroll", function() {
+  var y = window.scrollY;
+  if (y >= 360) {
+    navBar.style.top = "0";
+  } else {
+    navBar.style.top = "-64px";
+  }
+});

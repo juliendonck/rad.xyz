@@ -28,6 +28,14 @@
 
 // base font styles
 
+// selection color
+::-moz-selection {
+  background: $blue;
+}
+::selection {
+  background: $blue;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
