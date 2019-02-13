@@ -33,40 +33,32 @@
         <li><a href="/docs.html">Docs</a></li>
         <li><a href="/garden.html">Garden</a></li>
         <li><a href="">Blog</a></li>
-        <li><code>$ brew install radicle</code></li>
       </ul>
       <button class="cross" id="close"></button>
     </div>
     <div class="nav-bar" id="nav">
-      <div class="try-logo">
-        <a href="/docs.html#try" class="header-btn">try</a>
-        <code>$ brew install radicle</code>
-      </div>
       <a href="/" class="rad-nav-logo"></a>
-      <button id="open">Menu</button>
-      <nav class="bar">
-        <ul>
-          <li>
-            <a href="https://github.com/oscoin/radicle" target="blank"
-              >Source
-            </a>
-          </li>
-          <li><a href="/docs.html">Docs</a></li>
-          <li><a href="/gardens.html">Garden</a></li>
-          <li><a href="">Blog</a></li>
-        </ul>
-      </nav>
+      <button class="hamburger" id="open">Menu</button>
+      <div class="bar">
+        <nav>
+          <ul>
+            <li>
+              <a href="https://github.com/oscoin/radicle" target="blank"
+                >Source
+              </a>
+            </li>
+            <li><a href="/docs.html">Docs</a></li>
+            <li><a href="/garden.html">Garden</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </nav>
+        <a href="/docs.html#try" class="header-btn">try</a>
+      </div>
     </div>
     <header>
       <div class="left-header">
-        <div class="try-logo">
+        <div class="small-nav">
           <a href="/docs.html#try" class="header-btn">try</a>
-          <code>$ brew install radicle</code>
-        </div>
-
-        <div class="title">
-          <div class="logo"></div>
-          <h1>A peer-to-peer stack for code collaboration</h1>
           <nav>
             <ul>
               <li>
@@ -75,10 +67,16 @@
                 </a>
               </li>
               <li><a href="/docs.html">Docs</a></li>
-              <li><a href="/gardens.html">Garden</a></li>
+              <li><a href="/garden.html">Garden</a></li>
               <li><a href="">Blog</a></li>
             </ul>
           </nav>
+          <button class="hamburger" id="open">Menu</button>
+        </div>
+
+        <div class="title">
+          <div class="logo"></div>
+          <h1>A peer-to-peer stack for code collaboration</h1>
         </div>
       </div>
       <div class="right-header"></div>
@@ -200,11 +198,10 @@
               underlying radicle and releasing documentation that will allow you
               to be able to write your own apps using this same peer-to-peer
               infrastructure.
-              <br /><br /><br />
-              <a class="button" href="/docs.html">
-                Learn more about the radicle stack<span>→</span>
-              </a>
             </p>
+            <a class="button" href="/docs.html">
+              Learn more about the radicle stack<span>→</span>
+            </a>
           </div>
           <div class="illustration"></div>
         </div>
@@ -269,8 +266,8 @@
         </div>
       </div>
     </footer>
-    <script src="js/asciinema-player.js"></script>
     <script src="js/perlin.js"></script>
     <script src="js/rad.js"></script>
+    <script src="js/asciinema-player.js"></script>
   </body>
 </html>

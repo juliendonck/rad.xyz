@@ -188,7 +188,7 @@ const navBar = document.getElementById("nav");
 
 window.addEventListener("scroll", function() {
   var y = window.scrollY;
-  if (y >= 360) {
+  if (y > 0) {
     navBar.style.top = "0";
   } else {
     navBar.style.top = "-64px";

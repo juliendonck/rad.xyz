@@ -185,14 +185,15 @@ p.captions {
   background-color: #5555ff;
   padding: 10px 16px 13px;
   color: #ffffff;
-  border-radius: 2px; }
+  border-radius: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
   .button.active, .active.header-btn {
     opacity: 0.8; }
   .button:hover, .header-btn:hover {
     opacity: 0.95;
     text-decoration: none; }
-  .button.garden, .garden.header-btn {
-    border: 1px solid #ffffff; }
   .button span, .header-btn span {
     margin-left: 14px;
     opacity: 0.35; }
@@ -200,8 +201,7 @@ p.captions {
 .header-btn {
   padding: 2px 8px 7px 8px;
   height: 29px;
-  font-size: 16px;
-  margin-right: 14px; }
+  font-size: 16px; }
 
 h1 {
   font-family: VulfMono, Arial, sans-serif;
@@ -315,6 +315,8 @@ main {
   text-align: center; }
   .garden-header h1 {
     margin-bottom: 16px; }
+  .garden-header a {
+    border: 1px solid #ffffff; }
 
 .gardens-content {
   margin-top: 64px;
@@ -348,60 +350,52 @@ main {
 
 .nav-bar {
   display: grid;
-  grid-template-columns: 1fr 106px 1fr;
+  grid-template-columns: 106px 1fr;
   align-items: center;
   height: 64px;
   width: 100%;
-  padding: 0 18px;
+  padding: 0 16px;
   z-index: 10;
   background-color: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   position: fixed;
   transition: none;
   top: 0; }
+  .nav-bar .bar {
+    display: flex;
+    justify-self: flex-end; }
+    .nav-bar .bar .header-btn {
+      margin-left: 20px; }
+    @media (max-width: 640px) {
+      .nav-bar .bar {
+        display: none; } }
   .nav-bar#nav {
     transition: top 0.2s;
     top: -64px;
     left: 0; }
-  .nav-bar button {
-    text-indent: -9999px;
-    width: 20px;
-    display: flex;
-    justify-self: flex-end;
-    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550050429/hamburger_rs9dhv.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    cursor: pointer; }
-    @media (min-width: 980px) {
-      .nav-bar button {
-        display: none; } }
 
-.try-logo {
+.hamburger {
+  text-indent: -9999px;
+  width: 20px;
   display: flex;
-  align-items: center; }
-  .try-logo button {
-    margin-right: 12px; }
-  .try-logo code {
-    font-size: 15px;
-    color: #5555ff; }
-    @media (max-width: 980px) {
-      .try-logo code {
-        display: none; } }
+  justify-self: flex-end;
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550050429/hamburger_rs9dhv.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer; }
+  @media (min-width: 640px) {
+    .hamburger {
+      display: none; } }
 
 nav ul {
-  display: flex;
-  justify-content: flex-end; }
+  display: flex; }
   nav ul li {
     font-size: 16px;
     margin-left: 20px; }
 
 nav a {
   color: #ff5555; }
-
-@media (max-width: 980px) {
-  nav.bar {
-    display: none; } }
 
 .rad-nav-logo {
   width: 106px;
@@ -425,8 +419,8 @@ nav a {
   .narrow-menu li {
     color: #ffffff;
     line-height: 30px; }
-  .narrow-menu code {
-    opacity: 0.5; }
+  .narrow-menu a {
+    color: #ffffff; }
 
 .cross {
   height: 17px;
@@ -447,19 +441,18 @@ header {
       grid-template-columns: 1fr;
       grid-template-rows: 406px 406px;
       border-bottom: none; } }
-  @media (max-width: 720px) {
+  @media (max-width: 640px) {
     header {
       grid-template-rows: 320px 320px; } }
 
 .left-header {
   margin: 16px; }
-  .left-header nav li {
-    font-size: 18px; }
-    .left-header nav li:first-child {
-      margin-left: 0; }
-    @media (min-width: 1680px) {
-      .left-header nav li {
-        font-size: 21px; } }
+  .left-header .small-nav {
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 640px) {
+      .left-header .small-nav nav {
+        display: none; } }
   .left-header .title {
     display: flex;
     height: 100%;
@@ -479,7 +472,7 @@ header {
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain; }
-    @media (max-width: 720px) {
+    @media (max-width: 640px) {
       .left-header .title {
         padding: 0px 24px 24px 24px; }
         .left-header .title h1 {
@@ -550,7 +543,11 @@ header {
   text-align: center;
   padding: 100px 0 24px 0; }
   .try h1 {
-    padding: 0 64px; }
+    padding: 0 32px; }
+    @media (max-width: 640px) {
+      .try h1 {
+        font-size: 21px;
+        line-height: 25px; } }
 
 .try-section {
   display: flex;
@@ -558,13 +555,12 @@ header {
   align-items: center; }
   .try-section h2 {
     color: #5555ff;
-    padding-top: 64px;
-    padding-bottom: 24px; }
+    padding: 64px 32px 24px 32px; }
   .try-section p {
-    max-width: 680px; }
+    max-width: 640px; }
   .try-section .terminal {
     margin-top: 32px;
-    width: 660px;
+    max-width: 660px;
     height: 220px;
     display: flex;
     justify-content: center;
@@ -592,12 +588,17 @@ header {
   color: #000000;
   padding: 48px; }
   .stack h1 {
-    padding-bottom: 16px; }
+    padding-bottom: 48px; }
+  .stack p {
+    margin-bottom: 64px; }
   .stack a {
-    color: #ffffff; }
+    color: #000000;
+    background: none;
+    border: 1px solid #000000; }
   .stack .stack-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     grid-column-gap: 64px;
     max-width: 1680px;
     margin: 0 auto; }
@@ -620,8 +621,12 @@ footer {
   footer .footer-content {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
     margin: 0 auto 64px auto;
     max-width: 1680px; }
+    footer .footer-content ul li a {
+      line-height: 28px;
+      color: #000000; }
     @media (max-width: 980px) {
       footer .footer-content {
         grid-template-columns: 1fr;
@@ -656,6 +661,7 @@ footer {
   footer .footer-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     grid-column-gap: 58px; }
     @media (max-width: 980px) {
       footer .footer-grid {

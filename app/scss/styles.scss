@@ -10,38 +10,6 @@
 // Home Page
 // ---------
 
-// narrow-menu
-
-.narrow-menu {
-  background-color: $red;
-  display: flex;
-  justify-content: space-between;
-  padding: 16px;
-  position: fixed;
-  top: -182px;
-  left: 0;
-  z-index: 11;
-  transition: top 0.2s;
-  width: 100%;
-  li {
-    color: $white;
-    line-height: 30px;
-  }
-  code {
-    opacity: 0.5;
-  }
-}
-
-.cross {
-  height: 17px;
-  width: 17px;
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550050945/cross_h4rofi.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-}
-
 // Header styles
 
 header {
@@ -54,21 +22,19 @@ header {
     grid-template-rows: 406px 406px;
     border-bottom: none;
   }
-  @media (max-width: 720px) {
+  @media (max-width: 640px) {
     grid-template-rows: 320px 320px;
   }
 }
 
 .left-header {
   margin: 16px;
-  nav {
-    li {
-      font-size: 18px;
-      &:first-child {
-        margin-left: 0;
-      }
-      @media (min-width: 1680px) {
-        font-size: 21px;
+  .small-nav {
+    display: flex;
+    justify-content: space-between;
+    nav {
+      @media (max-width: 640px) {
+        display: none;
       }
     }
   }
@@ -93,7 +59,7 @@ header {
       background-repeat: no-repeat;
       background-size: contain;
     }
-    @media (max-width: 720px) {
+    @media (max-width: 640px) {
       padding: 0px 24px 24px 24px;
       h1 {
         font-size: 18px;
@@ -182,7 +148,11 @@ header {
   text-align: center;
   padding: 100px 0 24px 0;
   h1 {
-    padding: 0 64px;
+    padding: 0 32px;
+    @media (max-width: 640px) {
+      font-size: 21px;
+      line-height: 25px;
+    }
   }
 }
 
@@ -192,15 +162,14 @@ header {
   align-items: center;
   h2 {
     color: $blue;
-    padding-top: 64px;
-    padding-bottom: 24px;
+    padding: 64px 32px 24px 32px;
   }
   p {
-    max-width: 680px;
+    max-width: 640px;
   }
   .terminal {
     margin-top: 32px;
-    width: 660px;
+    max-width: 660px;
     height: 220px;
     display: flex;
     justify-content: center;
@@ -233,14 +202,20 @@ header {
   color: $black;
   padding: 48px;
   h1 {
-    padding-bottom: 16px;
+    padding-bottom: 48px;
+  }
+  p {
+    margin-bottom: 64px;
   }
   a {
-    color: $white;
+    color: $black;
+    background: none;
+    border: 1px solid $black;
   }
   .stack-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     grid-column-gap: 64px;
     max-width: 1680px;
     margin: 0 auto;
@@ -267,8 +242,13 @@ footer {
   .footer-content {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
     margin: 0 auto 64px auto;
     max-width: 1680px;
+    ul li a {
+      line-height: 28px;
+      color: $black;
+    }
     @media (max-width: 980px) {
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto;
@@ -309,6 +289,7 @@ footer {
   .footer-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     grid-column-gap: 58px;
     @media (max-width: 980px) {
       grid-template-columns: 1fr;
