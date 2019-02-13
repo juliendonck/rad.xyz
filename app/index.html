@@ -89,25 +89,25 @@
         <div id="peer">
           <h2>Peer–to–peer</h2>
           <p>
-            Open source development is fundamentally P2P. The Radicle stack runs
+            Open source development is fundamentally P2P. The radicle stack runs
             on IPFS to enable fully peer-to-peer conversations with code.
           </p>
         </div>
         <div id="prog">
           <h2>Programmable</h2>
           <p>
-            The Radicle collaboration apps bring issue management and patch
-            proposals into the terminal. Use git-inspired commands to coordinate
-            with peers and review your history offline.
+            Apps are written in the radicle language, a Lisp dialect designed
+            specifically for programming state machines that replicate across
+            a peer-to-peer network. Tools and documentation for developing your
+            own radicle apps coming soon!
           </p>
         </div>
         <div id="term">
           <h2>Terminal-first</h2>
           <p>
-            Apps are written in the radicle language, a Lisp dialect designed
-            specifically for programming state machines for peer-to-peer
-            replication. Tools and documentation for developing your own radicle
-            applications coming soon!
+            Radicle's collaboration apps bring issue management and patch
+            proposals into the terminal. Use git-inspired commands to coordinate
+            with peers and manage contributions.
           </p>
         </div>
       </section>
@@ -135,9 +135,10 @@
         <div class="try-section">
           <h2>Collaborate on code</h2>
           <p>
-            <code>rad diff</code> is a way to collaborate on git repositories,
-            completely peer-to-peer. Propose patches to any project and track
-            your proposals.
+            <code>rad diff</code> gives you the tools to collaborate on git repositories,
+            completely P2P. Propose single-commit changes to a project you
+            follow and track the status of your proposed patches. Multi-commit
+            change proposals are on the roadmap, and coming soon :)
           </p>
           <div class="terminal blue">
             <asciinema-player
@@ -155,8 +156,8 @@
           <h2>Setup a project</h2>
           <p>
             <code>rad project</code> allows you to register your git projects on
-            IPFS and connects your repo to other radicle applications, like
-            <code>rad issue</code> and <code>rad diff</code>.
+            the radicle network and connect your repo to other radicle applications,
+            like <code>rad issues</code> and <code>rad diff</code>.
           </p>
           <div class="terminal">
             <asciinema-player
@@ -184,21 +185,18 @@
           <div class="text">
             <h1>Radicle Stack</h1>
             <p>
-              Let’s learn a little more about the technology stack<br />used to
-              create this collaboration suite. <br /><br /><br />
-              A radicle app is a state machine that specifies a complete model
-              of all possible states and the allowable transitions between them.
+              Each radicle collaboration app illustrated above is a peer-to-peer
+              program that sync with anyone who clones your open source project.
               <br /><br />
-              State machines are programmed with the radicle language, a special
-              Lisp dialect designed for P2P replication.
+              Taking inspiration from the original git model, where a single maintainer
+              of a repo accepts patches, radicle apps are controlled by the owner of
+              the project and updates can be submitted by any peer on the radicle network.
               <br /><br />
-              If IPFS is for P2P data, radicle is for P2P programs, where state
-              updates are written as entries in a sequentially-hashed event log
-              and the resulting radicle chain is synchronized with your peers
-              over IPFS.
+              In the coming months we’ll be formalizing the technical stack underlying
+              radicle and releasing documentation that will allow you to be able to write
+              your own apps using this same peer-to-peer infrastructure.
               <br /><br />
-              We’ll publish details on the complete stack soon, letting you fork
-              and modify our applications, or make your own P2P apps.
+              Intrigued? Find out more about the radicle architecture in the → <a href="/docs.html">docs</a>.
             </p>
           </div>
           <div class="illustration"></div>
@@ -232,18 +230,20 @@
           <h2>How to contribute</h2>
           <div class="footer-grid">
             <p>
-              The radicle development team hosts our weekly updates on the P2P
-              messaging network secure scuttlebutt. Follow our pub and the
-              #radicle-weekly-updates to see what we’re working on.
+              We dogfood radicle! See the <a href="/docs.html#issues">issues documentation</a> to
+              clone the repo project and submit an issue directly to our project.
               <br /><br />
-              We dogfood radicle! See the issues instructions to fork the
-              self-hosted radicle repo and add an issue directly to our project.
+              You can find radicle's project ID here: _____________
+              <br /><br />
+              If you have an issue submitting an issue, send us an email at radicle@monadic.xyz,
+              or drop in the #radicle channel on the freenode IRC.
             </p>
             <p>
-              Find project ID here: _____________
+              The radicle development team runs weekly updates on the P2P
+              social network Secure Scuttlebutt.
               <br /><br />
-              Or, if you’d prefer, send us an email, or drop in the #radicle
-              channel on the freenode IRC.
+              Connect to our <a href="pub.os.computer">pub</a>
+              and follow the #radicle-weekly-updates channel to see what we’re working on.
             </p>
           </div>
           <p>
