@@ -23,7 +23,7 @@ function animateDivider(el) {
   function animate() {
     if (width !== el.clientWidth) {
       width = el.clientWidth;
-      svg.setAttribute('viewBox', '0 0 ' + width + ' 500');
+      svg.setAttribute('width', width + 'px');
     }
 
     now = Date.now();
