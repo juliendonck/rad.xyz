@@ -170,7 +170,8 @@ body {
   height: 100%;
   font-family: FoundersGrotesk, Arial, sans-serif;
   font-size: 18px;
-  line-height: 22px; }
+  line-height: 22px;
+  overflow-x: hidden; }
 
 p.captions {
   font-family: FoundersGrotesk, Arial, sans-serif;
@@ -297,9 +298,9 @@ main {
       line-height: 24px; }
 
 .garden-header {
-  position: absolute;
+  position: fixed;
   top: 220px;
-  width: 640px;
+  max-width: 540px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -308,7 +309,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 36px 96px 48px 96px;
+  padding: 36px 0 48px 0;
   background-color: #5555ff;
   color: #ffffff;
   text-align: center; }
@@ -442,11 +443,14 @@ header {
   @media (max-width: 980px) {
     header {
       grid-template-columns: 1fr;
-      grid-template-rows: 45vw 45vw;
+      grid-template-rows: 406px 406px;
       border-bottom: none; } }
+  @media (max-width: 720px) {
+    header {
+      grid-template-rows: 320px 320px; } }
 
 .left-header {
-  padding: 16px; }
+  margin: 16px; }
   .left-header nav li {
     font-size: 18px; }
     .left-header nav li:first-child {
@@ -475,7 +479,7 @@ header {
       background-size: contain; }
     @media (max-width: 720px) {
       .left-header .title {
-        padding: 0; }
+        padding: 0px 24px 24px 24px; }
         .left-header .title h1 {
           font-size: 18px;
           line-height: 24px;
@@ -485,7 +489,7 @@ header {
           height: 36px; } }
 
 .right-header {
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549799165/metaballs_oqeuhf.gif");
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550076300/matissecutout_xk4fe9.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -511,10 +515,12 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  grid-column-gap: 32px;
-  padding: 64px 32px; }
+  grid-column-gap: 24px;
+  padding: 64px 48px; }
   .collab h2 {
-    padding-bottom: 16px; }
+    margin-bottom: 16px;
+    overflow: hidden;
+    height: 33px; }
   .collab .overlay {
     position: absolute;
     display: none; }
@@ -641,10 +647,10 @@ footer {
     footer .footer-text h2 {
       color: #ff5555;
       padding: 32px 0 24px 0; }
-    footer .footer-text p:last-child {
+    footer .footer-text p.p2p-links {
       margin-top: 48px;
       word-break: break-all; }
-      footer .footer-text p:last-child a {
+      footer .footer-text p.p2p-links a {
         color: #5555ff; }
   footer .footer-grid {
     display: grid;
