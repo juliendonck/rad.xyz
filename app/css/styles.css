@@ -199,18 +199,21 @@ p.captions {
 h1 {
   font-family: VulfMono, Arial, sans-serif;
   font-size: 42px;
-  line-height: 52px; }
+  line-height: 52px;
+  font-weight: normal; }
 
 h2 {
   font-family: FutureMono, monospace;
   font-size: 28px;
-  line-height: 33px; }
+  line-height: 33px;
+  font-weight: normal; }
 
 h3,
 h4 {
   font-family: FoundersGrotesk, Arial, sans-serif;
   font-size: 27px;
-  line-height: 32px; }
+  line-height: 32px;
+  font-weight: normal; }
 
 code,
 pre {
