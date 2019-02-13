@@ -257,10 +257,13 @@ aside {
 main {
   grid-column: 2;
   grid-row: 2;
-  align-self: start;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
   color: #000000; }
   main .chapter {
-    padding: 0 48px 48px 48px; }
+    padding: 0 48px 48px 48px;
+    max-width: 960px; }
   main h1 {
     color: #5555ff;
     padding-top: 112px; }
@@ -310,16 +313,29 @@ main {
   height: 64px;
   width: 100%;
   padding: 0 18px;
-  position: fixed;
-  top: -64px;
-  left: 0;
   z-index: 10;
   background-color: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  transition: top 0.2s; }
-  .nav-bar.docs {
-    transition: none;
-    top: 0; }
+  position: fixed;
+  transition: none;
+  top: 0; }
+  .nav-bar#nav {
+    transition: top 0.2s;
+    top: -64px;
+    left: 0; }
+  .nav-bar button {
+    text-indent: -9999px;
+    width: 20px;
+    display: flex;
+    justify-self: flex-end;
+    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550050429/hamburger_rs9dhv.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer; }
+    @media (min-width: 980px) {
+      .nav-bar button {
+        display: none; } }
 
 .try-logo {
   display: flex;
@@ -329,6 +345,9 @@ main {
   .try-logo code {
     font-size: 15px;
     color: #5555ff; }
+    @media (max-width: 980px) {
+      .try-logo code {
+        display: none; } }
 
 nav ul {
   display: flex;
@@ -338,6 +357,10 @@ nav ul {
     color: #ff5555;
     margin-left: 20px; }
 
+@media (max-width: 980px) {
+  nav.bar {
+    display: none; } }
+
 .rad-nav-logo {
   width: 106px;
   height: 24px;
@@ -345,6 +368,32 @@ nav ul {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; }
+
+.narrow-menu {
+  background-color: #ff5555;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  position: fixed;
+  top: -182px;
+  left: 0;
+  z-index: 11;
+  transition: top 0.2s;
+  width: 100%; }
+  .narrow-menu li {
+    color: #ffffff;
+    line-height: 30px; }
+  .narrow-menu code {
+    opacity: 0.5; }
+
+.cross {
+  height: 17px;
+  width: 17px;
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550050945/cross_h4rofi.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer; }
 
 header {
   display: grid;
@@ -363,7 +412,7 @@ header {
     font-size: 18px; }
     .left-header nav li:first-child {
       margin-left: 0; }
-    @media (min-width: 1441px) {
+    @media (min-width: 1680px) {
       .left-header nav li {
         font-size: 21px; } }
   .left-header .title {
@@ -402,7 +451,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover; }
 
-@media (min-width: 1441px) {
+@media (min-width: 1680px) {
   .large-content {
     display: grid;
     grid-template-columns: 50vw 50vw;
@@ -430,11 +479,12 @@ header {
   .collab .overlay {
     position: absolute;
     display: none; }
-  @media (max-width: 980px), (min-width: 1441px) {
+  @media (max-width: 980px), (min-width: 1680px) {
     .collab {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, auto);
-      grid-row-gap: 64px; }
+      grid-row-gap: 64px;
+      padding: 144px 32px; }
       .collab div {
         display: flex;
         flex-direction: column;
@@ -452,6 +502,8 @@ header {
   color: #ffffff;
   text-align: center;
   padding: 100px 0 24px 0; }
+  .try h1 {
+    padding: 0 64px; }
 
 .try-section {
   display: flex;
@@ -488,6 +540,9 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+  @media (min-width: 1680px) {
+    .globe {
+      display: none; } }
 
 .stack {
   background-color: #ff5555;
@@ -499,12 +554,12 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 64px;
-    max-width: 1441px;
+    max-width: 1680px;
     margin: 0 auto; }
-    @media (max-width: 980px), (min-width: 1441px) {
+    @media (max-width: 980px), (min-width: 1680px) {
       .stack .stack-content {
         grid-template-columns: 1fr;
-        grid-template-rows: auto 254px;
+        grid-template-rows: auto 320px;
         grid-column-gap: 0px;
         grid-row-gap: 64px;
         max-width: 640px; } }
@@ -521,7 +576,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 3fr;
     margin: 0 auto 64px auto;
-    max-width: 1441px; }
+    max-width: 1680px; }
     @media (max-width: 980px) {
       footer .footer-content {
         grid-template-columns: 1fr;
@@ -539,7 +594,7 @@ footer {
     @media (min-width: 980px) {
       footer .footer-content {
         padding: 0 48px; } }
-    @media (min-width: 1441px) {
+    @media (min-width: 1680px) {
       footer .footer-content {
         margin-top: 64px; } }
   footer .footer-text {

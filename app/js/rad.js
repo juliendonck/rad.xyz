@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-navBar = document.getElementById("nav-bar");
+const navBar = document.getElementById("nav");
 
 window.addEventListener("scroll", function() {
   var y = window.scrollY;
@@ -194,3 +194,14 @@ window.addEventListener("scroll", function() {
     navBar.style.top = "-64px";
   }
 });
+
+var hamburger = document.getElementById('open');
+var cross = document.getElementById('close');
+const narrowNav = document.getElementById("narrow-menu");
+
+hamburger.onclick = function () {
+  narrowNav.style.top="0"
+};
+cross.onclick = function () {
+  narrowNav.style.top="-182px"
+};

@@ -36,9 +36,12 @@ aside {
 main {
   grid-column: 2;
   grid-row: 2;
-  align-self: start;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
   .chapter {
     padding: 0 48px 48px 48px;
+    max-width: 960px;
   }
   color: $black;
   h1 {

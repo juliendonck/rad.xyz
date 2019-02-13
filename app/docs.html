@@ -14,13 +14,26 @@
   </head>
 
   <body>
-    <div class="nav-bar docs" id="nav-bar">
+    <div class="narrow-menu" id="narrow-menu">
+      <ul>
+        <li>
+          <a href="https://github.com/oscoin/radicle" target="blank">Source </a>
+        </li>
+        <li><a href="/docs.html">Docs</a></li>
+        <li><a href="">Garden</a></li>
+        <li><a href="">Blog</a></li>
+        <li><code>$ brew install radicle</code></li>
+      </ul>
+      <button class="cross" id="close"></button>
+    </div>
+    <div class="nav-bar">
       <div class="try-logo">
         <a href="/docs.html#try" class="header-btn">try</a>
         <code>$ brew install radicle</code>
       </div>
       <a href="/" class="rad-nav-logo"></a>
-      <nav>
+      <button id="open">Menu</button>
+      <nav class="bar">
         <ul>
           <li>
             <a href="https://github.com/oscoin/radicle" target="blank"
