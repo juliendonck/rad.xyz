@@ -122,6 +122,7 @@ p {
 }
 
 a {
+  color: $blue;
   &.active {
     opacity: 0.8;
   }
