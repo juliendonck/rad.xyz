@@ -183,8 +183,7 @@ p.captions {
   font-size: 18px;
   line-height: 20px;
   background-color: #5555ff;
-  height: 44px;
-  padding: 10px 16px;
+  padding: 10px 16px 13px;
   color: #ffffff;
   border-radius: 2px; }
   .button.active, .active.header-btn {
@@ -575,13 +574,12 @@ header {
     background-color: #5555ff; }
 
 .guide-cta {
-  padding-bottom: 2px;
   margin: 64px 0 36px 0; }
 
 .globe {
   height: 320px;
   width: 320px;
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549985964/1018px-As08-16-2593_ckwc9j.jpg");
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550053669/1018px-As08-16-2593-white_z8errz.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
