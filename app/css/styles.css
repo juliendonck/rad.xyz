@@ -286,6 +286,14 @@ main {
     .global-footer .global-footer-content ul li {
       line-height: 24px; }
 
+.gardens-content {
+  background-color: #5555ff;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); }
+  .gardens-content pre {
+    color: #ffffff;
+    font-family: 'Courier', monospace; }
+
 .divider {
   background-color: #ff5555; }
   .divider svg path {
