@@ -14,6 +14,8 @@ import (
 	"unicode/utf8"
 )
 
+var grasChars = []byte{'"', '.', ',', '\''}
+
 type ctx struct {
 	Gardens []string
 }
@@ -73,14 +75,14 @@ func main() {
 	}
 }
 
-const field = `x-----------------x
-\                 \
-/                 /
-\                 \
-/                 /
-\                 \
-/                 /
-x-----------------x`
+const field = `x------------------x
+\                  \
+/                  /
+\                  \
+/                  /
+\                  \
+/                  /
+x------------------x`
 
 const tpl = `{{- define "index" }}<!DOCTYPE html>
 <html>
