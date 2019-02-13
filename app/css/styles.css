@@ -155,10 +155,12 @@ button:focus {
   src: url("../fonts/TheFutureMono01-Regular.otf"); }
 
 ::-moz-selection {
-  background: #5555ff; }
+  background: #ffff55;
+  color: #000000; }
 
 ::selection {
-  background: #5555ff; }
+  background: #ffff55;
+  color: #000000; }
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -189,6 +191,11 @@ p.captions {
   .button:hover, .header-btn:hover {
     opacity: 0.95;
     text-decoration: none; }
+  .button.garden, .garden.header-btn {
+    border: 1px solid #ffffff; }
+  .button span, .header-btn span {
+    margin-left: 14px;
+    opacity: 0.35; }
 
 .header-btn {
   padding: 2px 8px 7px 8px;
@@ -289,13 +296,28 @@ main {
     .global-footer .global-footer-content ul li {
       line-height: 24px; }
 
-.gardens-content {
+.garden-header {
+  position: fixed;
+  top: 220px;
+  text-align: center;
   background-color: #5555ff;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr); }
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 96px;
+  left: 20vw; }
+
+.gardens-content {
+  margin-top: 64px;
+  background-color: #5555ff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
   .gardens-content pre {
     color: #ffffff;
-    font-family: 'Courier', monospace; }
+    font-family: "Courier New", Courier, monospace; }
 
 .divider {
   background-color: #ff5555; }
@@ -540,9 +562,6 @@ header {
 .guide-cta {
   padding-bottom: 2px;
   margin: 64px 0 36px 0; }
-  .guide-cta span {
-    margin-left: 14px;
-    opacity: 0.35; }
 
 .globe {
   height: 320px;

@@ -30,10 +30,12 @@
 
 // selection color
 ::-moz-selection {
-  background: $blue;
+  background: $yellow;
+  color: $black;
 }
 ::selection {
-  background: $blue;
+  background: $yellow;
+  color: $black;
 }
 
 body {
@@ -67,6 +69,13 @@ p.captions {
   &:hover {
     opacity: 0.95;
     text-decoration: none;
+  }
+  &.garden {
+    border: 1px solid $white;
+  }
+  span {
+    margin-left: 14px;
+    opacity: 0.35;
   }
 }
 .header-btn {
