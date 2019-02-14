@@ -181,14 +181,13 @@ p.captions {
 .button, .header-btn {
   font-family: FoundersGrotesk, Arial, sans-serif;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 24px;
   background-color: #5555ff;
   padding: 10px 16px 13px;
   color: #ffffff;
   border-radius: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; }
+  display: block;
+  text-align: center; }
   .button.active, .active.header-btn {
     opacity: 0.8; }
   .button:hover, .header-btn:hover {
@@ -484,7 +483,7 @@ header {
           height: 36px; } }
 
 .right-header {
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549799165/metaballs_oqeuhf.gif");
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550133303/tumblr_pc6875xcVe1wy5o2ho1_500_nya767.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }

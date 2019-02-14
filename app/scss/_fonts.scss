@@ -58,14 +58,13 @@ p.captions {
 .button {
   font-family: FoundersGrotesk, Arial, sans-serif;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 24px;
   background-color: $blue;
   padding: 10px 16px 13px;
   color: $white;
   border-radius: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: block;
+  text-align: center;
   &.active {
     opacity: 0.8;
   }
