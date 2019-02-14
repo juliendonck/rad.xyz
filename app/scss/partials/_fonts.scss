@@ -86,10 +86,6 @@ h4 {
   font-size: 27px;
   line-height: 32px;
   font-weight: normal;
-  @media (max-width: 640px) {
-    font-size: 20px;
-    line-height: 24px;
-  }
 }
 
 code,
@@ -97,11 +93,15 @@ pre {
   font-family: FoundersGroteskMono, monospace;
   font-size: 16px;
   line-height: 22px;
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 p {
   code {
-    opacity: 0.7;
+    opacity: 0.8;
   }
 }
 

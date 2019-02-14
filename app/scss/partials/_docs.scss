@@ -3,20 +3,21 @@
 .docs-content {
   display: grid;
   grid-template-columns: 280px auto;
-  grid-template-rows: minmax(min-content, 1fr);
+  grid-template-rows: minmax(min-content, auto);
   grid-gap: 0;
+  @media (max-width: 980px) {
+    grid-template-columns: auto;
+  }
 }
 
 aside {
   position: fixed;
   top: 64px;
-  height: 100%;
   width: 280px;
   grid-column: 1;
   grid-row: 2;
   padding: 48px 36px;
   color: $black;
-  border-right: 1px solid rgba($black, 0.2);
   li {
     line-height: 22px;
     padding-bottom: 12px;
@@ -31,6 +32,9 @@ aside {
       color: $red;
     }
   }
+  @media (max-width: 980px) {
+    display: none;
+  }
 }
 
 main {
@@ -39,6 +43,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-self: center;
+  border-left: 1px solid rgba($black, 0.2);
+
   .chapter {
     padding: 0 48px 48px 48px;
     max-width: 960px;
@@ -56,23 +62,42 @@ main {
     padding: 3px;
     color: #494949;
   }
+  @media (max-width: 640px) {
+    .chapter {
+      padding: 0 32px 32px 32px;
+    }
+    h1 {
+      padding-top: 96px;
+    }
+    h3 {
+      padding: 36px 0 16px;
+    }
+    code {
+      padding: 2px 3px;
+    }
+  }
 }
 
 // Footer
 
 .global-footer {
-  background-color: $red;
-  color: $white;
-  .global-footer-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 0 auto;
-    max-width: 1440px;
-    padding: 48px;
-    ul {
-      li {
-        line-height: 24px;
-      }
+  z-index: 10;
+  background-color: $white;
+  padding: 0 48px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 32px;
+    justify-content: center;
+    li {
+      margin: 0 9px;
+    }
+    a {
+      color: $black;
     }
   }
 }

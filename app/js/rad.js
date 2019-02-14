@@ -196,10 +196,14 @@ window.addEventListener("scroll", function() {
 });
 
 var hamburger = document.getElementById('open');
+var hamburger2 = document.getElementById('narrow-open');
 var cross = document.getElementById('close');
-const narrowNav = document.getElementById("narrow-menu");
+var narrowNav = document.getElementById("narrow-menu");
 
 hamburger.onclick = function () {
+  narrowNav.style.top="0"
+};
+hamburger2.onclick = function () {
   narrowNav.style.top="0"
 };
 cross.onclick = function () {

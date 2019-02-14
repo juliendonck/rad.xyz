@@ -208,20 +208,20 @@ h4 {
   font-size: 27px;
   line-height: 32px;
   font-weight: normal; }
-  @media (max-width: 640px) {
-    h3,
-    h4 {
-      font-size: 20px;
-      line-height: 24px; } }
 
 code,
 pre {
   font-family: FoundersGroteskMono, monospace;
   font-size: 16px;
   line-height: 22px; }
+  @media (max-width: 640px) {
+    code,
+    pre {
+      font-size: 14px;
+      line-height: 18px; } }
 
 p code {
-  opacity: 0.7; }
+  opacity: 0.8; }
 
 a {
   color: #5555ff; }
@@ -261,19 +261,20 @@ a {
 .docs-content {
   display: grid;
   grid-template-columns: 280px auto;
-  grid-template-rows: minmax(min-content, 1fr);
+  grid-template-rows: minmax(min-content, auto);
   grid-gap: 0; }
+  @media (max-width: 980px) {
+    .docs-content {
+      grid-template-columns: auto; } }
 
 aside {
   position: fixed;
   top: 64px;
-  height: 100%;
   width: 280px;
   grid-column: 1;
   grid-row: 2;
   padding: 48px 36px;
-  color: #000000;
-  border-right: 1px solid rgba(0, 0, 0, 0.2); }
+  color: #000000; }
   aside li {
     line-height: 22px;
     padding-bottom: 12px; }
@@ -284,6 +285,9 @@ aside {
       text-decoration: none; }
     aside li a:active {
       color: #ff5555; }
+  @media (max-width: 980px) {
+    aside {
+      display: none; } }
 
 main {
   grid-column: 2;
@@ -291,6 +295,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-self: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
   color: #000000; }
   main .chapter {
     padding: 0 48px 48px 48px;
@@ -304,18 +309,33 @@ main {
     background-color: #f2f2f2;
     padding: 3px;
     color: #494949; }
+  @media (max-width: 640px) {
+    main .chapter {
+      padding: 0 32px 32px 32px; }
+    main h1 {
+      padding-top: 96px; }
+    main h3 {
+      padding: 36px 0 16px; }
+    main code {
+      padding: 2px 3px; } }
 
 .global-footer {
-  background-color: #ff5555;
-  color: #ffffff; }
-  .global-footer .global-footer-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 0 auto;
-    max-width: 1440px;
-    padding: 48px; }
-    .global-footer .global-footer-content ul li {
-      line-height: 24px; }
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 0 48px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+  .global-footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 32px;
+    justify-content: center; }
+    .global-footer ul li {
+      margin: 0 9px; }
+    .global-footer ul a {
+      color: #000000; }
 
 .garden-header {
   position: fixed;
