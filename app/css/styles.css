@@ -154,14 +154,6 @@ button:focus {
   font-weight: bold;
   src: url("../fonts/TheFutureMono01-Regular.otf"); }
 
-::-moz-selection {
-  background: #ffff55;
-  color: #000000; }
-
-::selection {
-  background: #ffff55;
-  color: #000000; }
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -319,24 +311,6 @@ main {
     main code {
       padding: 2px 3px; } }
 
-.global-footer {
-  z-index: 10;
-  background-color: #ffffff;
-  padding: 0 48px 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center; }
-  .global-footer ul {
-    display: flex;
-    flex-wrap: wrap;
-    line-height: 32px;
-    justify-content: center; }
-    .global-footer ul li {
-      margin: 0 9px; }
-    .global-footer ul a {
-      color: #000000; }
-
 .garden-header {
   position: fixed;
   top: 220px;
@@ -379,6 +353,11 @@ main {
     .divider.white svg path {
       fill: #ff5555;
       stroke: #ff5555; }
+  .divider.garden {
+    background-color: #5555ff; }
+    .divider.garden svg path {
+      fill: #5555ff;
+      stroke: #ffffff; }
   .divider.line svg path {
     fill: transparent;
     stroke: #000000; }
@@ -470,6 +449,28 @@ nav a {
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer; }
+
+.global-footer {
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 0 48px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+  .global-footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 32px;
+    justify-content: center; }
+    .global-footer ul li {
+      margin: 0 9px; }
+    .global-footer ul a {
+      color: #000000; }
+  .global-footer.garden {
+    background-color: #5555ff; }
+    .global-footer.garden a {
+      color: white; }
 
 header {
   display: grid;
@@ -622,7 +623,7 @@ header {
       width: 80vw;
       margin-top: 24px; }
       .try-section .terminal pre {
-        width: 64vw !important;
+        width: 72vw !important;
         font-size: 12px !important;
         overflow: hidden; } }
 

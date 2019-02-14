@@ -26,18 +26,6 @@
   src: url("../fonts/TheFutureMono01-Regular.otf");
 }
 
-// base font styles
-
-// selection color
-::-moz-selection {
-  background: $yellow;
-  color: $black;
-}
-::selection {
-  background: $yellow;
-  color: $black;
-}
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

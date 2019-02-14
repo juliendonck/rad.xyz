@@ -1,5 +1,5 @@
 .divider {
-  background-color: #ff5555;
+  background-color: $red;
 
   svg path {
     fill: $black;
@@ -10,11 +10,17 @@
   &.white {
     background-color: $white;
     svg path {
-      fill: #ff5555;
-      stroke: #ff5555;
+      fill: $red;
+      stroke: $red;
     }
   }
-
+  &.garden {
+    background-color: $blue;
+    svg path {
+      fill: $blue;
+      stroke: $white;
+    }
+  }
   &.line {
     svg path {
       fill: transparent;

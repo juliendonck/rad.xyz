@@ -7,6 +7,7 @@
 @import "partials/gardens";
 @import "partials/divider";
 @import "partials/nav-bar";
+@import "partials/footer";
 
 // Home Page
 // ---------
@@ -197,7 +198,7 @@ header {
       width: 80vw;
       margin-top: 24px;
       pre {
-        width: 64vw !important;
+        width: 72vw !important;
         font-size: 12px !important;
         overflow: hidden;
       }
