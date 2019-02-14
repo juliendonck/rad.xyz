@@ -555,7 +555,8 @@ header {
           text-align: center; } }
   @media (max-width: 640px) {
     .collab {
-      padding: 48px 32px; }
+      padding: 48px 32px;
+      grid-row-gap: 36px; }
       .collab h2 {
         margin-bottom: 8px; } }
 
@@ -571,7 +572,7 @@ header {
     padding: 0 32px; }
   @media (max-width: 640px) {
     .try {
-      padding: 24px 0; } }
+      padding: 36px 0; } }
 
 .try-section {
   display: flex;
@@ -594,11 +595,12 @@ header {
     background-color: #5555ff; }
   @media (max-width: 640px) {
     .try-section h2 {
-      padding: 24px; }
+      padding: 36px 24px 16px 24px; }
     .try-section p {
       max-width: 80vw; }
     .try-section .terminal {
-      width: 80vw; }
+      width: 80vw;
+      margin-top: 24px; }
       .try-section .terminal pre {
         width: 64vw !important;
         font-size: 12px !important;

@@ -139,6 +139,7 @@ header {
   }
   @media (max-width: 640px) {
     padding: 48px 32px;
+    grid-row-gap: 36px;
     h2 {
       margin-bottom: 8px;
     }
@@ -157,7 +158,7 @@ header {
     padding: 0 32px;
   }
   @media (max-width: 640px) {
-    padding: 24px 0;
+    padding: 36px 0;
   }
 }
 
@@ -186,13 +187,14 @@ header {
   }
   @media (max-width: 640px) {
     h2 {
-      padding: 24px;
+      padding: 36px 24px 16px 24px;
     }
     p {
       max-width: 80vw;
     }
     .terminal {
       width: 80vw;
+      margin-top: 24px;
       pre {
         width: 64vw !important;
         font-size: 12px !important;
