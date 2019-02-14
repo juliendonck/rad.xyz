@@ -182,30 +182,6 @@ p.captions {
   font-size: 16px;
   line-height: 20px; }
 
-.button, .header-btn {
-  font-family: FoundersGrotesk, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  background-color: #5555ff;
-  padding: 10px 16px 13px;
-  color: #ffffff;
-  border-radius: 2px;
-  display: block;
-  text-align: center; }
-  .button.active, .active.header-btn {
-    opacity: 0.8; }
-  .button:hover, .header-btn:hover {
-    opacity: 0.95;
-    text-decoration: none; }
-  .button span, .header-btn span {
-    margin-left: 14px;
-    opacity: 0.35; }
-
-.header-btn {
-  padding: 2px 8px 7px 8px;
-  height: 29px;
-  font-size: 16px; }
-
 h1 {
   font-family: VulfMono, Arial, sans-serif;
   font-size: 42px;
@@ -257,6 +233,30 @@ a {
     a {
       font-size: 16px;
       line-height: 20px; } }
+
+.button, .header-btn {
+  font-family: FoundersGrotesk, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #5555ff;
+  padding: 10px 16px 13px;
+  color: #ffffff;
+  border-radius: 2px;
+  display: block;
+  text-align: center; }
+  .button.active, .active.header-btn {
+    opacity: 0.8; }
+  .button:hover, .header-btn:hover {
+    opacity: 0.95;
+    text-decoration: none; }
+  .button span, .header-btn span {
+    margin-left: 14px;
+    opacity: 0.35; }
+
+.header-btn {
+  padding: 0px 8px 7px;
+  height: 29px;
+  font-size: 16px; }
 
 .docs-content {
   display: grid;
