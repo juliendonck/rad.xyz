@@ -172,6 +172,10 @@ body {
   font-size: 18px;
   line-height: 22px;
   overflow-x: hidden; }
+  @media (max-width: 640px) {
+    body {
+      font-size: 16px;
+      line-height: 20px; } }
 
 p.captions {
   font-family: FoundersGrotesk, Arial, sans-serif;
@@ -207,12 +211,20 @@ h1 {
   font-size: 42px;
   line-height: 52px;
   font-weight: normal; }
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 24px;
+      line-height: 32px; } }
 
 h2 {
   font-family: FutureMono, monospace;
   font-size: 28px;
   line-height: 33px;
   font-weight: normal; }
+  @media (max-width: 640px) {
+    h2 {
+      font-size: 21px;
+      line-height: 24px; } }
 
 h3,
 h4 {
@@ -220,6 +232,11 @@ h4 {
   font-size: 27px;
   line-height: 32px;
   font-weight: normal; }
+  @media (max-width: 640px) {
+    h3,
+    h4 {
+      font-size: 20px;
+      line-height: 24px; } }
 
 code,
 pre {
@@ -236,6 +253,10 @@ a {
     opacity: 0.8; }
   a:hover {
     text-decoration: underline; }
+  @media (max-width: 640px) {
+    a {
+      font-size: 16px;
+      line-height: 20px; } }
 
 .docs-content {
   display: grid;
@@ -458,7 +479,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 24px 64px 64px 64px; }
+    padding: 64px; }
     .left-header .title h1 {
       font-size: 28px;
       line-height: 38px;
@@ -473,7 +494,7 @@ header {
       background-size: contain; }
     @media (max-width: 640px) {
       .left-header .title {
-        padding: 0px 24px 24px 24px; }
+        padding: 24px; }
         .left-header .title h1 {
           font-size: 18px;
           line-height: 24px;
@@ -532,6 +553,11 @@ header {
         max-width: 640px; }
         .collab div p {
           text-align: center; } }
+  @media (max-width: 640px) {
+    .collab {
+      padding: 48px 32px; }
+      .collab h2 {
+        margin-bottom: 8px; } }
 
 .try {
   display: flex;
@@ -540,13 +566,12 @@ header {
   background-color: #000000;
   color: #ffffff;
   text-align: center;
-  padding: 100px 0 24px 0; }
+  padding: 96px 0 24px 0; }
   .try h1 {
     padding: 0 32px; }
-    @media (max-width: 640px) {
-      .try h1 {
-        font-size: 21px;
-        line-height: 25px; } }
+  @media (max-width: 640px) {
+    .try {
+      padding: 24px 0; } }
 
 .try-section {
   display: flex;
@@ -559,7 +584,7 @@ header {
     max-width: 640px; }
   .try-section .terminal {
     margin-top: 32px;
-    max-width: 660px;
+    max-width: 640px;
     height: 220px;
     display: flex;
     justify-content: center;
@@ -567,9 +592,20 @@ header {
     background-color: #ffffff; }
   .try-section .blue {
     background-color: #5555ff; }
+  @media (max-width: 640px) {
+    .try-section h2 {
+      padding: 24px; }
+    .try-section p {
+      max-width: 80vw; }
+    .try-section .terminal {
+      width: 80vw; }
+      .try-section .terminal pre {
+        width: 64vw !important;
+        font-size: 12px !important;
+        overflow: hidden; } }
 
 .guide-cta {
-  margin: 64px 0 36px 0; }
+  margin: 64px 26px 36px 26px; }
 
 .globe {
   height: 320px;
@@ -581,6 +617,10 @@ header {
   @media (min-width: 1680px) {
     .globe {
       display: none; } }
+  @media (max-width: 640px) {
+    .globe {
+      height: 240px;
+      width: 240px; } }
 
 .stack {
   background-color: #ff5555;
@@ -608,6 +648,9 @@ header {
         grid-column-gap: 0px;
         grid-row-gap: 64px;
         max-width: 640px; } }
+    @media (max-width: 640px) {
+      .stack .stack-content {
+        grid-template-rows: auto 200px; } }
   .stack .illustration {
     background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549627170/stack5_adsy9k.svg");
     background-position: center;
