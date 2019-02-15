@@ -581,9 +581,9 @@ header {
       text-align: center;
       margin: 42px 0 24px 0; }
     .left-header .title .logo {
-      width: 226px;
-      height: 48px;
-      background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549882894/radicle-logo-2_el4fmz.svg");
+      width: 297px;
+      height: 50px;
+      background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550228984/radicle-logo-alpha_n94rqc.svg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain; }
@@ -595,8 +595,8 @@ header {
           line-height: 24px;
           margin-top: 24px; }
         .left-header .title .logo {
-          width: 166px;
-          height: 36px; } }
+          width: 220px;
+          height: 37px; } }
 
 .right-header {
   background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550133303/tumblr_pc6875xcVe1wy5o2ho1_500_nya767.gif");
