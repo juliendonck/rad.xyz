@@ -441,6 +441,12 @@ main {
     .divider.footer {
       display: none; } }
 
+#wavy-divider {
+  width: 100%;
+  height: 200px;
+  background-color: #000000;
+  display: block; }
+
 .nav-bar {
   display: grid;
   grid-template-columns: 106px 1fr;
