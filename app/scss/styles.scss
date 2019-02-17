@@ -212,9 +212,10 @@ header {
 }
 
 .globe {
-  height: 240px;
-  width: 240px;
-  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550433110/NASA-240x240-halftone_dhhnln.gif");
+  margin: 48px 0 32px;
+  height: 280px;
+  width: 280px;
+  background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550437129/globe-ascii-bw_bfq3ql.gif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -231,40 +232,39 @@ header {
   background-color: $red;
   color: $black;
   padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .text {
+    max-width: 720px;
+  }
   h1 {
     padding-bottom: 48px;
   }
   p {
-    margin-bottom: 64px;
+    margin-bottom: 3em;
   }
   a {
-    color: $black;
+    margin-top: 3em;
+    color: $white;
     background: none;
-    border: 1px solid $black;
+    border: 1px solid $white;
+    max-width: 360px;
   }
-  .stack-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-column-gap: 64px;
-    max-width: 1680px;
-    margin: 0 auto;
-    @media (max-width: 980px), (min-width: 1680px) {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto 320px;
-      grid-column-gap: 0px;
-      grid-row-gap: 64px;
-      max-width: 640px;
-    }
-    @media (max-width: 640px) {
-      grid-template-rows: auto 200px;
-    }
-  }
+
   .illustration {
-    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1549627170/stack5_adsy9k.svg");
+    background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550437112/stack6_txj7ii.svg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    width: 540px;
+    height: 0;
+    padding: 0; /* reset */
+    padding-bottom: 248px;
+    @media (max-width: 640px) {
+      width: 100%;
+      padding-bottom: calc(100% * 213 / 462);
+    }
   }
 }
 
