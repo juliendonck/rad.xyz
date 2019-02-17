@@ -7,6 +7,12 @@
     url("../fonts/FoundersGroteskTextWeb-Regular.woff") format("woff");
 }
 @font-face {
+  font-family: "FoundersGroteskMedium";
+  src: url("../fonts/FoundersGroteskTextWeb-Medium.eot?") format("eot"),
+    url("../fonts/FoundersGroteskTextWeb-Medium.woff2") format("woff2"),
+    url("../fonts/FoundersGroteskTextWeb-Medium.woff") format("woff");
+}
+@font-face {
   font-family: "FoundersGroteskMono";
   src: url("../fonts/FoundersGroteskMonoWeb-Regular.eot?") format("eot"),
     url("../fonts/FoundersGroteskMonoWeb-Regular.woff2") format("woff2"),
@@ -52,6 +58,7 @@ h1 {
   font-size: 42px;
   line-height: 52px;
   font-weight: normal;
+  font-style: normal;
   @media (max-width: 640px) {
     font-size: 24px;
     line-height: 32px;
@@ -63,6 +70,7 @@ h2 {
   font-size: 28px;
   line-height: 33px;
   font-weight: normal;
+  font-style: normal;
   @media (max-width: 640px) {
     font-size: 21px;
     line-height: 24px;
@@ -73,12 +81,18 @@ h3 {
   font-size: 27px;
   line-height: 32px;
   font-weight: normal;
+  font-style: normal;
 }
 h4 {
-  font-family: FoundersGrotesk, Arial, sans-serif;
-  font-size: 21px;
-  line-height: 28px;
+  font-family: FoundersGroteskMedium, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
   font-weight: normal;
+  font-style: normal;
+  @media (max-width: 640px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 code,
@@ -90,6 +104,12 @@ pre {
     font-size: 14px;
     line-height: 18px;
   }
+}
+
+strong {
+  font-family: FoundersGroteskMedium, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 p {

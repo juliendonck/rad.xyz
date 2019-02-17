@@ -14,25 +14,33 @@
     margin: 96px 32px 72px;
   }
   article {
-    margin-bottom: 96px;
+    margin-bottom: 4em;
     line-height: 24px;
     h3 {
-      margin-bottom: 32px;
+      margin-bottom: 2em;
     }
     h4 {
-      margin-bottom: 16px;
+      margin: 2em 0 1em;
     }
     p {
-      margin-bottom: 24px;
+      margin-bottom: 1em;
     }
     ul {
-      margin-bottom: 24px;
+      margin-bottom: 1em;
+      list-style-type: none;
       li {
-        list-style-type: initial;
+        padding-left: 26px;
+        &:before {
+          content: "\2014";
+          position: absolute;
+          margin-left: -24px;
+        }
       }
     }
+
     ol {
-      margin-bottom: 24px;
+      margin-bottom: 1em;
+      list-style-position: inside;
       li {
         list-style-type: bullets;
         margin-bottom: 9px;
@@ -44,7 +52,7 @@
       line-height: 22px;
     }
     blockquote {
-      padding: 16px 24px;
+      padding: 1em 2em;
       color: rgba($black, 0.6);
     }
     sub,
@@ -65,7 +73,6 @@
       height: 6px;
       background-image: url("https://res.cloudinary.com/juliendonck/image/upload/v1550165007/wave-line_yzwo3f.svg");
       background-repeat: repeat-x;
-      opacity: 0.3;
       margin: 48px 0 32px;
     }
     .footnotes {
