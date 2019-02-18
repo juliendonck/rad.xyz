@@ -310,32 +310,60 @@ main {
   flex-direction: column;
   justify-self: center;
   border-left: 1px solid rgba(0, 0, 0, 0.2);
-  width: 100%;
-  color: #000000; }
+  width: 100%; }
   main .chapter {
     padding: 0 48px 48px 48px;
     margin: 0 auto;
     max-width: 960px;
-    line-height: 24px; }
-  main h1 {
-    color: #5555ff;
-    padding-top: 112px; }
-  main h3 {
-    padding: 64px 0 24px 0; }
-  main code {
-    background-color: #f2f2f2;
-    padding: 3px;
-    color: #494949; }
+    line-height: 24px;
+    color: #000000; }
+    main .chapter h1 {
+      color: #5555ff;
+      margin: 3em 0 1em; }
+    main .chapter .section {
+      word-break: break-all; }
+      main .chapter .section h2 {
+        word-break: normal;
+        font-family: FoundersGrotesk, Arial, sans-serif;
+        font-size: 27px;
+        line-height: 32px;
+        font-weight: normal;
+        font-style: normal;
+        margin: 2em 0 1em; }
+      main .chapter .section p {
+        word-break: normal; }
+      main .chapter .section code, main .chapter .section tt, main .chapter .section .pre {
+        background-color: #f2f2f2;
+        padding: 3px;
+        color: rgba(0, 0, 0, 0.8);
+        font-family: FoundersGroteskMono, monospace;
+        font-size: 16px;
+        line-height: 22px; }
+        @media (max-width: 640px) {
+          main .chapter .section code, main .chapter .section tt, main .chapter .section .pre {
+            font-size: 14px;
+            line-height: 18px; } }
+      main .chapter .section pre {
+        background-color: #f2f2f2;
+        padding: 16px;
+        margin: 1em 0;
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 16px;
+        line-height: 22px;
+        white-space: pre-wrap;
+        word-wrap: break-all; }
+        @media (max-width: 640px) {
+          main .chapter .section pre {
+            font-size: 14px;
+            line-height: 18px; } }
   @media (max-width: 640px) {
     main .chapter {
       padding: 0 32px 32px 32px;
       line-height: 22px; }
-    main h1 {
-      padding-top: 96px; }
-    main h3 {
-      padding: 36px 0 16px; }
-    main code {
-      padding: 2px 3px; } }
+      main .chapter h1 {
+        margin-top: 4em; }
+      main .chapter code, main .chapter tt, main .chapter .pre {
+        padding: 2px 3px; } }
 
 .blog-content {
   margin-top: 64px;
@@ -380,6 +408,9 @@ main {
     .blog-content article blockquote {
       padding: 1em 2em;
       color: rgba(0, 0, 0, 0.6); }
+    .blog-content article cite {
+      font-style: normal;
+      font-weight: normal; }
     .blog-content article sub,
     .blog-content article sup {
       font-size: 75%;
