@@ -1,6 +1,7 @@
 // doc styles
 
 .docs-content {
+  margin-top: 64px;
   display: grid;
   grid-template-columns: 280px auto;
   grid-template-rows: minmax(min-content, auto);
@@ -53,7 +54,7 @@ main {
     color: $black;
     h1 {
       color: $blue;
-      margin: 3em 0 1em;
+      margin: 1em 0 1em;
     }
     .section {
       word-break: break-all;

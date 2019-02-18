@@ -273,6 +273,7 @@ a {
   font-size: 16px; }
 
 .docs-content {
+  margin-top: 64px;
   display: grid;
   grid-template-columns: 280px auto;
   grid-template-rows: minmax(min-content, auto);
@@ -319,7 +320,7 @@ main {
     color: #000000; }
     main .chapter h1 {
       color: #5555ff;
-      margin: 3em 0 1em; }
+      margin: 1em 0 1em; }
     main .chapter .section {
       word-break: break-all; }
       main .chapter .section h2 {
