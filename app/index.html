@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Radicle</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="css/styles.css"
-    />
-    <link rel="stylesheet" type="text/css" href="css/asciinema-player.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="css/asciinema-theme-blue.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="css/asciinema-theme-white.css"
-    />
-  </head>
 
-  <body>
-    <div class="narrow-menu" id="narrow-menu">
-      <ul>
-        <li>
-          <a href="https://github.com/oscoin/radicle" target="blank">Source </a>
-        </li>
-        <li><a href="/docs.html">Docs</a></li>
-        <li><a href="/garden.html">Garden</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-      </ul>
-      <button class="cross" id="close"></button>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Radicle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="css/asciinema-player.css" />
+  <link rel="stylesheet" type="text/css" href="css/asciinema-theme-blue.css" />
+  <link rel="stylesheet" type="text/css" href="css/asciinema-theme-white.css" />
+</head>
+
+<body>
+  <div class="narrow-menu" id="narrow-menu">
+    <ul>
+      <li>
+        <a href="https://github.com/oscoin/radicle" target="blank">Source </a>
+      </li>
+      <li><a href="/docs.html">Docs</a></li>
+      <li><a href="/garden.html">Garden</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+    </ul>
+    <button class="cross" id="close"></button>
+  </div>
+  <div class="nav-bar" id="nav">
+    <a href="/" class="rad-nav-logo"></a>
+    <button class="hamburger" id="open">Menu</button>
+    <div class="bar">
+      <nav>
+        <ul>
+          <li>
+            <a href="https://github.com/oscoin/radicle" target="blank">Source
+            </a>
+          </li>
+          <li><a href="/docs.html">Docs</a></li>
+          <li><a href="/garden.html">Garden</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+        </ul>
+      </nav>
+      <a href="/docs.html#start" class="header-btn">install</a>
     </div>
-    <div class="nav-bar" id="nav">
-      <a href="/" class="rad-nav-logo"></a>
-      <button class="hamburger" id="open">Menu</button>
-      <div class="bar">
+  </div>
+  <header>
+    <div class="left-header">
+      <div class="small-nav">
+        <a href="/docs.#start" class="header-btn">install</a>
         <nav>
           <ul>
             <li>
-              <a href="https://github.com/oscoin/radicle" target="blank"
-                >Source
+              <a href="https://github.com/oscoin/radicle" target="blank">Source
               </a>
             </li>
             <li><a href="/docs.html">Docs</a></li>
@@ -52,221 +57,180 @@
             <li><a href="/blog.html">Blog</a></li>
           </ul>
         </nav>
-        <a href="/docs.html#start" class="header-btn">install</a>
+        <button class="hamburger" id="narrow-open">Menu</button>
+      </div>
+
+      <div class="title">
+        <div class="logo"></div>
+        <h1>A peer-to-peer stack for code collaboration</h1>
+      </div>
+
+      <div class="marquee3k" data-speed="0.25" data-pausable="true">
+        <span> WARNING: experimental software, not for production use. </span>
       </div>
     </div>
-    <header>
-      <div class="left-header">
-        <div class="small-nav">
-          <a href="/docs.#start" class="header-btn">install</a>
-          <nav>
-            <ul>
-              <li>
-                <a href="https://github.com/oscoin/radicle" target="blank"
-                  >Source
-                </a>
-              </li>
-              <li><a href="/docs.html">Docs</a></li>
-              <li><a href="/garden.html">Garden</a></li>
-              <li><a href="/blog.html">Blog</a></li>
-            </ul>
-          </nav>
-          <button class="hamburger" id="narrow-open">Menu</button>
-        </div>
+    <div class="right-header"></div>
+  </header>
 
-        <div class="title">
-          <div class="logo"></div>
-          <h1>A peer-to-peer stack for code collaboration</h1>
+  <div class="large-content">
+    <section class="collab">
+      <div id="peer">
+        <h2>Peer–to–peer</h2>
+        <p>
+          Open source development is fundamentally P2P. The radicle stack runs
+          on IPFS to enable fully peer-to-peer conversations with code.
+        </p>
+      </div>
+      <div id="prog">
+        <h2>Programmable</h2>
+        <p>
+          Apps are written in the radicle language, a Lisp dialect designed
+          specifically for programming state machines that replicate across a
+          peer-to-peer network. Tools and documentation for developing your
+          own radicle apps coming soon!
+        </p>
+      </div>
+      <div id="term">
+        <h2>Terminal-first</h2>
+        <p>
+          Radicle's collaboration apps bring issue management and patch
+          proposals into the terminal. Use git-inspired commands to coordinate
+          with peers and manage contributions.
+        </p>
+      </div>
+    </section>
+
+    <section class="try">
+      <h1>Collaborate with Radicle</h1>
+
+      <div class="try-section">
+        <h2>Manage your issues</h2>
+        <p>
+          <code>rad issue</code> brings issue management to your terminal.
+          Create, view, list and comment to your heart's content.
+        </p>
+        <div class="terminal">
+          <asciinema-player autoplay font-size="14px" loop preload src="video/issues.cast" theme="white">
+          </asciinema-player>
         </div>
       </div>
-      <div class="right-header"></div>
-    </header>
 
-    <div class="large-content">
-      <section class="collab">
-        <div id="peer">
-          <h2>Peer–to–peer</h2>
-          <p>
-            Open source development is fundamentally P2P. The radicle stack runs
-            on IPFS to enable fully peer-to-peer conversations with code.
-          </p>
+      <div class="try-section">
+        <h2>Collaborate on code</h2>
+        <p>
+          <code>rad diff</code> gives you the tools to collaborate on git
+          repositories, completely P2P. Propose and track changes to a project
+          you follow with a patch-based collaboration model.
+        </p>
+        <div class="terminal blue">
+          <asciinema-player autoplay font-size="14px" loop preload src="video/issues.cast" theme="blue">
+          </asciinema-player>
         </div>
-        <div id="prog">
-          <h2>Programmable</h2>
-          <p>
-            Apps are written in the radicle language, a Lisp dialect designed
-            specifically for programming state machines that replicate across a
-            peer-to-peer network. Tools and documentation for developing your
-            own radicle apps coming soon!
-          </p>
+      </div>
+
+      <div class="try-section">
+        <h2>Setup a project</h2>
+        <p>
+          <code>rad project</code> allows you to register your git projects on
+          the radicle network and connect your repo to other radicle
+          applications, like <code>rad issues</code> and
+          <code>rad diff</code>.
+        </p>
+        <div class="terminal">
+          <asciinema-player autoplay font-size="14px" loop preload src="video/issues.cast" theme="white">
+          </asciinema-player>
         </div>
-        <div id="term">
-          <h2>Terminal-first</h2>
+      </div>
+
+      <a class="button guide-cta" href="/docs.html#start">Follow our guide to learn radicle<span>→</span></a>
+
+      <div class="globe"></div>
+    </section>
+
+    <section class="divider"></section>
+
+    <section class="stack">
+      <div class="text">
+        <h1>Radicle Stack</h1>
+        <p>
+          Each radicle app is a peer-to-peer program that syncs with anyone
+          who clones your open source project.
+          <br /><br />
+          Taking inspiration from the original git model, where a single
+          maintainer of a repo accepts patches, radicle apps are controlled by
+          the owner of the project and updates can be submitted by any peer on
+          the radicle network.
+          <br /><br />
+          In the coming months we’ll be formalizing the technical stack
+          underlying radicle and releasing documentation that will allow you
+          to write your own apps using this same peer-to-peer infrastructure.
+        </p>
+      </div>
+      <div class="illustration"></div>
+      <a class="button" href="/docs.html">
+        Learn more about the radicle stack<span>→</span>
+      </a>
+    </section>
+
+    <section class="divider white"></section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <ul>
+        <li><a href="/">About</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/">Twitter</a></li>
+        <li><a href="/">Mastodon</a></li>
+        <li><a href="irc://freenode:1/radicle">IRC</a></li>
+        <li><a href="/">Email</a></li>
+        <li><a href="/">Code of conduct</a></li>
+        <li>
+          <a href="https://github.com/oscoin/radicle" target="blank">Github</a>
+        </li>
+        <li><a href="/">Radicle project</a></li>
+        <li>
+          <a href="https://github.com/oscoin/radicle/blob/master/LICENSE">License</a>
+        </li>
+      </ul>
+      <section class="divider white line footer"></section>
+      <div class="footer-text">
+        <h1>Get involved</h1>
+        <h2>How to contribute</h2>
+        <div class="footer-grid">
           <p>
-            Radicle's collaboration apps bring issue management and patch
-            proposals into the terminal. Use git-inspired commands to coordinate
-            with peers and manage contributions.
-          </p>
-        </div>
-      </section>
-
-      <section class="try">
-        <h1>Collaborate with Radicle</h1>
-
-        <div class="try-section">
-          <h2>Manage your issues</h2>
-          <p>
-            <code>rad issue</code> brings issue management to your terminal.
-            Create, view, list and comment to your heart's content.
-          </p>
-          <div class="terminal">
-            <asciinema-player
-              autoplay
-              font-size="14px"
-              loop
-              preload
-              src="video/issues.cast"
-              theme="white"
-            ></asciinema-player>
-          </div>
-        </div>
-
-        <div class="try-section">
-          <h2>Collaborate on code</h2>
-          <p>
-            <code>rad diff</code> gives you the tools to collaborate on git
-            repositories, completely P2P. Propose and track changes to a project
-            you follow with a patch-based collaboration model.
-          </p>
-          <div class="terminal blue">
-            <asciinema-player
-              autoplay
-              font-size="14px"
-              loop
-              preload
-              src="video/issues.cast"
-              theme="blue"
-            ></asciinema-player>
-          </div>
-        </div>
-
-        <div class="try-section">
-          <h2>Setup a project</h2>
-          <p>
-            <code>rad project</code> allows you to register your git projects on
-            the radicle network and connect your repo to other radicle
-            applications, like <code>rad issues</code> and
-            <code>rad diff</code>.
-          </p>
-          <div class="terminal">
-            <asciinema-player
-              autoplay
-              font-size="14px"
-              loop
-              preload
-              src="video/issues.cast"
-              theme="white"
-            ></asciinema-player>
-          </div>
-        </div>
-
-        <a class="button guide-cta" href="/docs.html#start"
-          >Follow our guide to learn radicle<span>→</span></a
-        >
-
-        <div class="globe"></div>
-      </section>
-
-      <section class="divider"></section>
-
-      <section class="stack">
-        <div class="text">
-          <h1>Radicle Stack</h1>
-          <p>
-            Each radicle app is a peer-to-peer program that syncs with anyone
-            who clones your open source project.
+            We dogfood radicle! See the
+            <a href="/docs.html#issues">issues documentation</a> to clone the
+            repo and submit an issue directly to our project. <br /><br />
+            You can find radicle's project ID here: _____________
             <br /><br />
-            Taking inspiration from the original git model, where a single
-            maintainer of a repo accepts patches, radicle apps are controlled by
-            the owner of the project and updates can be submitted by any peer on
-            the radicle network.
+            Having an issue submitting an issue? Send us an email at
+            <a href="mailto:radicle@monadic.xyz">radicle@monadic.xyz</a>, or
+            drop in the
+            <a href="irc://freenode:1/radicle">#radicle</a> channel on the
+            freenode IRC.
+          </p>
+          <p>
+            The radicle development team runs weekly updates on the P2P social
+            network Secure Scuttlebutt.
             <br /><br />
-            In the coming months we’ll be formalizing the technical stack
-            underlying radicle and releasing documentation that will allow you
-            to write your own apps using this same peer-to-peer infrastructure.
+            Connect to our <a href="pub.os.computer">pub</a>
+            and follow the #radicle-weekly-updates channel to see what we’re
+            working on.
           </p>
         </div>
-        <div class="illustration"></div>
-        <a class="button" href="/docs.html">
-          Learn more about the radicle stack<span>→</span>
-        </a>
-      </section>
-
-      <section class="divider white"></section>
+        <p class="p2p-links">
+          Access this website on:<br />
+          <a href="">dat://445b0dbc94c371e6f3a2e80da8b1107cc8f6ba13e65318c43018a8d94ef8254a</a><br />
+          <a href="">https://ipfs.io/ipns/QmZrL4YkmgC7x3ZAicHx9s3fkoNgVmg87zHMSsmjRnhM23/</a>
+        </p>
+      </div>
     </div>
+  </footer>
+  <script src="js/marquee3k.js"></script>
+  <script src="js/perlin.js"></script>
+  <script src="js/rad.js"></script>
+  <script src="js/asciinema-player.js"></script>
+</body>
 
-    <footer>
-      <div class="footer-content">
-        <ul>
-          <li><a href="/">About</a></li>
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/">Twitter</a></li>
-          <li><a href="/">Mastodon</a></li>
-          <li><a href="irc://freenode:1/radicle">IRC</a></li>
-          <li><a href="/">Email</a></li>
-          <li><a href="/">Code of conduct</a></li>
-          <li>
-            <a href="https://github.com/oscoin/radicle" target="blank"
-              >Github</a
-            >
-          </li>
-          <li><a href="/">Radicle project</a></li>
-          <li>
-            <a href="https://github.com/oscoin/radicle/blob/master/LICENSE"
-              >License</a
-            >
-          </li>
-        </ul>
-        <section class="divider white line footer"></section>
-        <div class="footer-text">
-          <h1>Get involved</h1>
-          <h2>How to contribute</h2>
-          <div class="footer-grid">
-            <p>
-              We dogfood radicle! See the
-              <a href="/docs.html#issues">issues documentation</a> to clone the
-              repo and submit an issue directly to our project. <br /><br />
-              You can find radicle's project ID here: _____________
-              <br /><br />
-              Having an issue submitting an issue? Send us an email at
-              <a href="mailto:radicle@monadic.xyz">radicle@monadic.xyz</a>, or
-              drop in the
-              <a href="irc://freenode:1/radicle">#radicle</a> channel on the
-              freenode IRC.
-            </p>
-            <p>
-              The radicle development team runs weekly updates on the P2P social
-              network Secure Scuttlebutt.
-              <br /><br />
-              Connect to our <a href="pub.os.computer">pub</a>
-              and follow the #radicle-weekly-updates channel to see what we’re
-              working on.
-            </p>
-          </div>
-          <p class="p2p-links">
-            Access this website on:<br />
-            <a href=""
-              >dat://445b0dbc94c371e6f3a2e80da8b1107cc8f6ba13e65318c43018a8d94ef8254a</a
-            ><br />
-            <a href=""
-              >https://ipfs.io/ipns/QmZrL4YkmgC7x3ZAicHx9s3fkoNgVmg87zHMSsmjRnhM23/</a
-            >
-          </p>
-        </div>
-      </div>
-    </footer>
-    <script src="js/perlin.js"></script>
-    <script src="js/rad.js"></script>
-    <script src="js/asciinema-player.js"></script>
-  </body>
 </html>

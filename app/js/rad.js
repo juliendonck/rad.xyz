@@ -1,3 +1,5 @@
+Marquee3k.init();
+
 function animateDivider(el) {
   let width = el.clientWidth;
   let isLine = el.classList.contains('line');
@@ -209,3 +211,4 @@ hamburger2.onclick = function () {
 cross.onclick = function () {
   narrowNav.style.top="-182px"
 };
+
